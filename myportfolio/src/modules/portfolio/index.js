@@ -1,7 +1,7 @@
 // modules/projects/index.js
 import React from 'react';
 
-const Projects = () => {
+const Portfolio = () => {
   return (
     <div>
       <h1>My Projects</h1>
@@ -14,4 +14,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Portfolio;

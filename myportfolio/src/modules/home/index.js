@@ -1,11 +1,25 @@
-// modules/home/index.js
-import React from 'react';
+import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
+import './home.css';
 
 const Home = () => {
+  const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.webp");
+  const hoverImage = "https://www.binarymonk.online/profil_bw.png"; 
   return (
-    <div>
-      <h1>Welcome to My Portfolio</h1>
-      <p>.</p>
+    <div className="position-absolute rounded start-0 custom-top-center flex-container">
+    
+            <div className="nameWrapper">
+                <h1>Dennis Jensen</h1>
+                <h5>Junior Full Stack Developer</h5>
+            </div>
+            <div className="imgWrapper">
+            <img 
+                src={imageSrc} 
+                alt="My profile picture"
+                onMouseEnter={() => setImageSrc(hoverImage)}
+                onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")}
+            />
+        </div>
     </div>
   );
 };
