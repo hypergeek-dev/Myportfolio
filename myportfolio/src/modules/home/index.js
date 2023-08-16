@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
 import './home.css';
 
 const Home = () => {
@@ -14,8 +13,9 @@ const Home = () => {
             </div>
             <div className="imgWrapper">
             <img 
+            
                 src={imageSrc} 
-                alt="My profile picture"
+                alt="My profile"
                 onMouseEnter={() => setImageSrc(hoverImage)}
                 onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")}
             />
