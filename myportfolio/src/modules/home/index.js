@@ -8,7 +8,7 @@ const Home = () => {
     <div className="position-absolute rounded start-0 custom-top-center flex-container">
     
             <div className="nameWrapper">
-                <h1>Dennis Jensen</h1>
+                <h1><span class="letter_large">D</span>ennis Jensen</h1>
                 <h5>Junior Full Stack Developer</h5>
             </div>
             <div className="imgWrapper">
