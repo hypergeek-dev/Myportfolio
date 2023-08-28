@@ -5,14 +5,10 @@
     width: fit-content;
     max-width: 60%;
     border-radius:15px;
-    justify-content: left;
+    justify-content:center;
     font-weight: 400;
   }
   
-  /* Row Styling */
-  .row {
-    margin-bottom: 1.5rem;
-  }
   
   /* Column Styling */
   .Col {
@@ -39,9 +35,16 @@
   p:first-of-type {
     margin-bottom: 1rem;
   }
+/* Wrapper styling */
+.img_wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  width: 100%;
 
-  /*image styling */
-  .img_wrapper img{
+}
 
-    width:80%;
-      }
+/* Image styling */
+.img_wrapper img {
+  width: 80%;
+}
