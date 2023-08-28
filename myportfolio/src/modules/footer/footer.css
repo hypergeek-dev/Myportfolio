@@ -1,0 +1,20 @@
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff; /* Optional: set background color */
+  }
+  
+  .social-icon i {
+    font-size: 24px;
+    color: #000;
+    border: 2px solid silver;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover i {
+    color: silver;
+    background-color: #000;
+  }
