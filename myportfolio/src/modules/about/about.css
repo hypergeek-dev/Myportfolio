@@ -10,7 +10,7 @@
   }
   
   /* Row Styling */
-  .Row {
+  .column {
     margin-bottom: 1.5rem;
   }
   
@@ -39,3 +39,9 @@
   p:first-of-type {
     margin-bottom: 1rem;
   }
+
+  /*image styling */
+  .img_wrapper img{
+
+    size:10%;
+      }

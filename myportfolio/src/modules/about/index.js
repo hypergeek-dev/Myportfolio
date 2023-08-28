@@ -5,7 +5,7 @@ import './about.css';  // Import the CSS
 const About = () => {
   return (
     <Container className="Container">
-      <Row className="Row">
+      <column className="Column">
         <Col xs={12} md={6} className="Col">
           <div className="text_wrapper">
             <h1>About Dennis Jensen</h1>
@@ -13,10 +13,10 @@ const About = () => {
             <p>Outside of work, I've done a bunch of different things. I've worked as a care assistant, looking after people's well-being. Right now, I'm leveling up my coding skills at the Code Institute in Dublin. Just so you know, I can drive, I help out with the tech stuff at my church, and I can speak English, Danish, and Swedish. I'm excited about blending my background in education with my love for coding, and I'd love to chat about how we can make some really cool digital stuff together.</p>
           </div>
           <div className="img_wrapper">
-            <img src="your-image-url-here.jpg" alt="Dennis Jensen" />
+            <img src="https://binarymonk.online/aboutme.webp" alt="Dennis Jensen" />
           </div>
         </Col>
-      </Row>
+      </column>
     </Container>
   );
 };
