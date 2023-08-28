@@ -10,7 +10,7 @@
   }
   
   /* Row Styling */
-  .column {
+  .row {
     margin-bottom: 1.5rem;
   }
   
@@ -43,5 +43,5 @@
   /*image styling */
   .img_wrapper img{
 
-    size:10%;
+    width:80%;
       }
