@@ -1,7 +1,7 @@
 
 .container-fluid p {
   padding: 1.25rem;
-
+  font-family: 'Open Sans', sans-serif;
   color: var(--color-background);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
