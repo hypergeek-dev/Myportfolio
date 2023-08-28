@@ -1,16 +1,20 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-
+import './about.css';  // Import the CSS
 
 const About = () => {
   return (
-    <Container>
-      <Row className="justify-content-center">
-        <Col xs={12} md={6}>
-          <h1>About Dennis Jensen</h1>
-          <p>Hello! I'm Dennis Jensen, a Junior Full Stack Developer with an intriguing blend of experience and passion. My dedication to software development is fortified by my background in pedagogics, having completed a postgraduate degree in the field. This unique combination of education and technology fuels my drive, enabling me to approach software challenges with an educator's perspective. While my expertise lies in HTML, CSS, and Javascript, I've also dabbled in Python and have hands-on experience with frameworks like Bootstrap. My version control skills include both Git and Github.</p>
-
-          <p>Beyond my professional endeavors, my life has been dotted with diverse experiences. I've been a care assistant, ensuring the emotional and physical well-being of clients. Presently, I am expanding my knowledge horizons at the Code Institute, Dublin, mastering the intricacies of Fullstack Software Development. On a personal note, I'm licensed to drive, am an active contributor to church audio/visuals, and am adept in English, Danish, and Swedish. As I look forward to further intertwining my educational insights with the dynamic world of software development, I am eager to connect and explore how we can create meaningful digital experiences together.</p>
+    <Container className="Container">
+      <Row className="Row">
+        <Col xs={12} md={6} className="Col">
+          <div className="text_wrapper">
+            <h1>About Dennis Jensen</h1>
+            <p>Hey there! I'm Dennis Jensen, and I'm a Junior Full Stack Developer who's really into both tech and teaching. I've got a postgrad degree in education, which gives me a unique way of tackling coding challenges. I'm good with HTML, CSS, and Javascript, but I've also played around with Python and know my way around Bootstrap. I'm familiar with Git and Github for version control too.</p>
+            <p>Outside of work, I've done a bunch of different things. I've worked as a care assistant, looking after people's well-being. Right now, I'm leveling up my coding skills at the Code Institute in Dublin. Just so you know, I can drive, I help out with the tech stuff at my church, and I can speak English, Danish, and Swedish. I'm excited about blending my background in education with my love for coding, and I'd love to chat about how we can make some really cool digital stuff together.</p>
+          </div>
+          <div className="img_wrapper">
+            <img src="your-image-url-here.jpg" alt="Dennis Jensen" />
+          </div>
         </Col>
       </Row>
     </Container>
