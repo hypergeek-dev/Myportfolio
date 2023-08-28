@@ -20,7 +20,15 @@
   .project-description {
     margin-top: 0.5rem;
     text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.5;
+    font-weight: 300;
   }
+
+  
+
+
   .d-flex {
     display: flex;
     justify-content: center; 
