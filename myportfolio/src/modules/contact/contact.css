@@ -43,25 +43,44 @@ body {
   
   .form-control, 
   textarea {
-    max-width: 400px;
-    background-color: #000;
-    color: #fff;
+   max-width: 90%;
+    width:60vw;
+    background-color: #faf9f6;
+    color: #000000;
     letter-spacing: 1px;
+    outline: none;
+    box-shadow: none;
   }
   
-  .send-button {
-    margin-top: 15px;
-    height: 34px;
-    width: 400px;
-    overflow: hidden;
-    transition: all .2s ease-in-out;
+  .form-control:focus, textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #333; 
   }
-  
-  .alt-send-button {
-    width: 400px;
-    height: 34px;
-    transition: all .2s ease-in-out;
+
+  .button-wrapper {
+ align-items: center;
+ justify-content: center;
   }
+/* contact.css */
+.send-button {
+  margin: 15px auto;
+  height: 34px;
+  width: auto;
+  background-color: #faf9f6;  /* Background color from About Me */
+  color: #333;  /* Text color from About Me */
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  outline: none;
+  box-shadow: none;
+}
+
+.send-button:focus, .send-button:hover {
+  outline: none;
+  box-shadow: none;
+
+border:#333;
+}
   
   .send-text {
     display: block;
@@ -70,9 +89,24 @@ body {
     letter-spacing: 2px;
   }
   
-  .alt-send-button:hover {
-    transform: translate3d(0px, -29px, 0px);
-  }
+/* Explicitly set the background and text color on hover and focus */
+.send-button:hover, .send-button:focus {
+  background-color: #333;  /* Set to your desired hover background color */
+  color: #faf9f6;  /* Set to your desired hover text color */
+  border: 1px solid #333;  /* Set to your desired border color */
+  outline: none;
+  box-shadow: none;
+  color: silver;
+  background-color: #000;
+}
+
+.alt-send-button:hover {
+  background-color: #333;  /* Set to your desired hover background color */
+  color: #faf9f6;  /* Set to your desired hover text color */
+  transform: translate3d(0px, -29px, 0px);
+  color: silver;
+  background-color: #000;
+}
   
   /* Begin Right Contact Page */
   .direct-contact-container {
@@ -247,6 +281,7 @@ body {
   
   @media screen and (max-width: 410px) {
     .send-button {
-      width: 99%;
+      width: auto;  
     }
   }
+  

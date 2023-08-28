@@ -1,18 +1,17 @@
 /* Container Styling */
 .Container {
- 
+
     background-color: #faf9f6;
     width: fit-content;
     max-width: 60%;
     border-radius:15px;
-    justify-content:center;
     font-weight: 400;
   }
-  
   
   /* Column Styling */
   .Col {
     padding: 1rem;
+
   }
   
   /* Header Styling */
@@ -39,12 +38,15 @@
 .img_wrapper {
   display: flex;
   justify-content: center; 
-  align-items: center;   
+  margin-top:4rem;
   width: 100%;
 
 }
 
+
+
 /* Image styling */
 .img_wrapper img {
   width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
