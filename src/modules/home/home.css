@@ -34,6 +34,7 @@ width: 50%;
 .nameWrapper h5 {
     text-transform: uppercase;
     margin-left:1vw;
+    color:#fff;
 
 }
 .imgWrapper img {
