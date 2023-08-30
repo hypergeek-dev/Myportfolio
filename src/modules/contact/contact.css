@@ -43,6 +43,7 @@
     background-color: transparent; 
     outline: none;
     box-shadow: none;
+    margin-bottom: 1vh;
   }
   
   .form-control:focus, textarea:focus {
