@@ -1,0 +1,63 @@
+/* gradient effect */
+.nav-link p {
+  padding: 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  color: black;  
+  font-size: 16px;  
+  font-weight: 400; 
+  letter-spacing: 1px;  
+  padding: 1px;  
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 2px;  
+  transition: background-image 2s, color 2s, transform 0.3s;
+}
+
+/* Hover effect */
+.nav-link:hover p {
+  background-clip: text;
+  background-image: linear-gradient(to right, red, orange, yellow);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: transparent;
+  animation: gradientAnimation 3s infinite;
+  transform: scale(1.5);
+}
+
+/* Animation for hover effect */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Media query for screens above 768px */
+@media (min-width: 768px) {
+  .navbar {
+    float: none;
+    display: inline-block;
+    text-align: center !important;
+  }
+}
+
+/* Media query for screens below 768px */
+@media (max-width: 767px) {
+  .navbar-toggler {
+    display: block !important;
+  }
+  .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-collapse.show {
+    display: block !important;
+  }
+  .nav-link {
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+}

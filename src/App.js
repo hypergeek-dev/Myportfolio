@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './modules/navbar/';
+import NavigationBar from './modules/navbar/';
 import Home from './modules/home/';
 import Footer from './modules/footer/';
 import About from './modules/about/';
@@ -12,7 +12,7 @@ import Contact from './modules/contact/';
 function App() {
   return (
     <Router>
-        <Navbar />
+<NavigationBar />
 
         {/* Routes */}
         <Routes>
