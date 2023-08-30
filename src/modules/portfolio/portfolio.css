@@ -34,9 +34,9 @@
     font-weight: 300;
   }
 
-  .link-icon {
+
  
-  }
+  
   .project-footer {
     padding: 8px;
     display: flex;
@@ -52,7 +52,7 @@
   .subcategori {
     display:flex;
     justify-content: flex-start;
-    align-items: start;
+    align-items:self-start;
     width:100%;
   }
 
