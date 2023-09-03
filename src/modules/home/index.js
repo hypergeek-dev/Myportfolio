@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../modules.css';
 
 const Home = () => {
   const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.webp");

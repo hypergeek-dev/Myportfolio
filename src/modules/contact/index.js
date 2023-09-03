@@ -1,6 +1,6 @@
 // modules/contact/index.js
 import React from 'react';
-import '../modules.css';
+
 
 const Contact = () => {
   return (
