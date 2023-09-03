@@ -3,7 +3,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './footer.css';
+import '../modules.css';
 const Footer = () => {
   return (
     <footer className="mt-5 footer-container">  

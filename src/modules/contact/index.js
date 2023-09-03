@@ -1,6 +1,6 @@
 // modules/contact/index.js
 import React from 'react';
-import './contact.css';  // Assuming you've saved your CSS in a file named contact.css in the same directory
+import '../modules.css';
 
 const Contact = () => {
   return (
