@@ -1,40 +1,71 @@
 .nameWrapper {
-
-    margin-left:5vw;
-    width: 50%;
+  display:flex;
+ flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  text-align: center;
     
     }
     
     .nameWrapper h1 {
         font-family: 'Bevan', cursive;
         font-size:350%;
+        width:100%;
+
     }
     
-    .letter_large
-    {
-      
-            font-size: 250%;;
-            text-transform: uppercase;
-            background-color: transparent;
-            -webkit-background-clip: text;
-            color: transparent;
-            -webkit-text-stroke: #fff;
-            -webkit-text-stroke-width: 1px;
-            transition: all 0.5s ease-in-out;
-            text-align: center;
-            animation: flicker 1s ease-in-out infinite alternate;
-        }
+    
+    .letter_large {
+      font-size: 250%;
+      text-transform: uppercase;
+      background-color: transparent;
+    
+      /* Background Clip */
+      -webkit-background-clip: text; 
+      -moz-background-clip: text;    
+      background-clip: text;       
+    
+      color: transparent;
+    
+      /* Text Stroke */
+      -webkit-text-stroke: #fff; 
+      -moz-text-stroke: #fff;   
+    
+      /* Text Stroke Width */
+      -webkit-text-stroke-width: 1px;
+      -moz-text-stroke-width: 1px;   
+    
+      /* Transition */
+      -webkit-transition: all 0.5s ease-in-out; 
+      -moz-transition: all 0.5s ease-in-out;    
+      -o-transition: all 0.5s ease-in-out;      
+      -ms-transition: all 0.5s ease-in-out;    
+      transition: all 0.5s ease-in-out;        
+    
+      text-align: center;
+    
+      /* Animation */
+      -webkit-animation: flicker 1s ease-in-out infinite alternate; 
+      -moz-animation: flicker 1s ease-in-out infinite alternate;    
+      -o-animation: flicker 1s ease-in-out infinite alternate;     
+      -ms-animation: flicker 1s ease-in-out infinite alternate;    
+      animation: flicker 1s ease-in-out infinite alternate;   
+    }
+    
         
     .imgWrapper
     {
+      display:flex;
         width: 50%;
         justify-content: center;
+      
     }
     
     .nameWrapper h5 {
         text-transform: uppercase;
-        margin-left:1vw;
         color:#fff;
+        width:100%;
+
     
     }
     .imgWrapper img {
@@ -58,16 +89,14 @@
         display: flex;
         flex-direction: row;  
         align-items: center;
-        align-content: space-around;
         width: 100%;
-        margin-top:10vh;
+        margin-top:20vh;
     }
     
     /* Media Queries */
     @media screen and (max-width: 768px) {
         .nameWrapper {
-          margin-left: 2vw;
-          width: 80%;
+          width: 100%;
         }
         .nameWrapper h1,
         .letter_large {
@@ -86,12 +115,23 @@
       }
 
 /* Navbar */
-
+.navDiv {
+  display:flex;
+  justify-content: flex-end;
+  background-color: #000;
+  position: fixed;
+top:0;
+}
 /* gradient effect */
+
+.nav-link {
+
+  margin-right:2rem;
+}
 .nav-link p {
     padding: 1.25rem;
     font-family: 'Open Sans', sans-serif;
-    color: black;  
+    color: rgb(255, 255, 255);  
     font-size: 1.5rem;  
     font-weight: 400; 
     letter-spacing: 1px;  
@@ -100,12 +140,16 @@
     -webkit-text-stroke-width: 2px;  
     transition: background-image 2s, color 2s, transform 0.3s;
   }
-  
-      
-  nav {
-    margin-left:70vw;
+  .smokey_transition {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to top, rgba(27, 27, 27, 0.7), transparent);
+    backdrop-filter: blur(10px); /* Add blur */
+
   }
-  
   /* Hover effect */
   .nav-link:hover p {
     background-clip: text;
@@ -116,6 +160,7 @@
     animation: gradientAnimation 3s infinite;
     transform: scale(1.5);
   }
+
   
   /* Animation for hover effect */
   @keyframes gradientAnimation {
@@ -131,36 +176,19 @@
   }
   
   /* Media query for screens above 768px */
-  @media (min-width: 768px) {
-    .navbar {
-      float: none;
-      display: inline-block;
-      text-align: center !important;
-    }
-  }
-  
-  /* Media query for screens below 768px */
-  @media (max-width: 767px) {
-    .navbar-toggler {
-      display: block !important;
-    }
-    .navbar-collapse {
-      display: none !important;
-    }
-    .navbar-collapse.show {
-      display: block !important;
-    }
+  @media (max-width: 768px) {
     .nav-link {
-      text-align: center;
-      padding: 0.5rem 1rem;
-      display: block;  
-    }
+      margin-right:0; }
+      .nav-link:hover p {
+
+        transform: scale(1.25);
+      }
   }
 
-/* Contact module -
+/* About module -
 Container Styling */
 .Container {
-
+  margin-top:20vh;
     width: fit-content;
     max-width: 60%;
     border-radius:15px;
@@ -218,7 +246,6 @@ Container Styling */
     align-items: flex-start; 
 }
 
-
 .project-container {
   display: flex;
   flex-direction: column;
@@ -248,13 +275,6 @@ Container Styling */
   }
 
 
- 
-  
-  .project-footer {
-    padding: 8px;
-    display: flex;
-
-  }
 
   .icon-link {
     font-size: 24px;
@@ -562,14 +582,29 @@ Container Styling */
     }
   }
   
-  /*footer module */
-  .footer-container {
-    font-family: 'Open Sans', sans-serif;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color:transparent; 
-  }
+ /* Target the footer */
+.footer {
+  display:flex;
+  justify-content: center;
+  background-color: #000000; 
+  padding: 1.5rem 0; 
+  width:100%;
+position: fixed;
+bottom:0;
+}
+
+
+.footer .btn {
+  margin: 0 30px; 
+
+}
+
+
+.footer span {
+  font-size: 1rempx; 
+
+color: #ffffff;
+}
     
     .social-icon i {
       font-size: 24px;
