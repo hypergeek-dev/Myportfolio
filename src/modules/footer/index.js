@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useNavigate, useLocation } from 'react-router-dom';
-import '../modules.css'; // Import the CSS file
+
 
 const Footer = () => {
   const navigate = useNavigate();

@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import '../modules.css';
+
 
 const soloProjects = [
   { imageUrl: 'https://binarymonk.online/screenshots/mindful_zensations.webp', description: 'This is my first project since I started my journey into webdesign. My goal was to keep it pure HTML and CSS, but also adapt my past skills in pedagogics and focus on accesibility in terms of using simple english and a colorpalette aimed at colorblindness plus a font created to aid people with dyslexia.', repository:'https://github.com/hypergeek-dev/Mindful-Zensations', liveSite:'https://hypergeek-dev.github.io/Mindful-Zensations/' },
