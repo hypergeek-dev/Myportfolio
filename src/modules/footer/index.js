@@ -1,11 +1,12 @@
 // Footer.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom';
-import '../modules.css'; 
+import { useNavigate, useLocation } from 'react-router-dom';
+import '../modules.css'; // Import the CSS file
 
 const Footer = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const modules = [
     { path: '/', name: 'Home' },
     { path: '/about', name: 'About' },
@@ -13,6 +14,13 @@ const Footer = () => {
     { path: '/contact', name: 'Contact' },
   ];
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
+
+  useEffect(() => {
+    const index = modules.findIndex(module => module.path === location.pathname);
+    if (index !== -1) {
+      setCurrentModuleIndex(index);
+    }
+  }, [location.pathname]);
 
   const handlePrev = () => {
     if (currentModuleIndex > 0) {
