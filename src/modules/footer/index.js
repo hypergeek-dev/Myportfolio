@@ -1,18 +1,17 @@
-// Footer.js
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useNavigate, useLocation } from 'react-router-dom';
 
+const modules = [
+  { path: '/', name: 'Home' },
+  { path: '/about', name: 'About' },
+  { path: '/portfolio', name: 'Portfolio' },
+  { path: '/contact', name: 'Contact' },
+];
 
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const modules = [
-    { path: '/', name: 'Home' },
-    { path: '/about', name: 'About' },
-    { path: '/portfolio', name: 'Portfolio' },
-    { path: '/contact', name: 'Contact' },
-  ];
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
 
   useEffect(() => {
