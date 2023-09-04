@@ -2,8 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const About = () => {
-  // eslint-disable-next-line
-  {/* Define an array of skills with their corresponding icons */}
+  // List of skills and corresponding icons
   const skills = [
     { title: 'HTML', icon: 'icons8-html-100.png' },
     { title: 'CSS', icon: 'icons8-css-100.png' },
@@ -19,37 +18,55 @@ const About = () => {
     { title: 'C++', icon: 'icons8-c++-100.png' },
     { title: 'Git', icon: 'icons8-merge-git-100.png' },
   ];
-
+  
+  // Render the About component
   return (
     <Container className="about_container">
       <Row className="Row">
-        {/* Left column for About Me and Education */}
         <Col xs={12} md={6} className="Col">
           <div className="about_card">
             <h2>About Me</h2>
             <p>
-              {/* About Me content */}
+              Hi, there!<br />I am a highly motivated Software Developer with a postgraduate degree in Pedagogics. I have a passion for IT and a strong desire to transition into a software development career. I am seeking a challenging position where I can leverage my educational background, teamwork skills, and problem-solving abilities to deliver innovative solutions to customers.
             </p>
           </div>
           <div className="about_card">
             <h2>Education</h2>
             <p>
-              {/* Education details */}
+              <strong>Code Institute, Dublin, Ireland (Remote)</strong><br />
+              Dec 2022 - Present<br />
+              Diploma in Fullstack Software Development
+            </p>
+            <p>
+              <strong>Lexicon – Malmö</strong><br />
+              July 2023 - Present<br />
+              .NET Developer
+            </p>
+            <p>
+              <strong>University of Campus Kolding, Denmark</strong><br />
+              Sept 2012 - March 2016<br />
+              Postgraduate in Pedagogics
             </p>
           </div>
         </Col>
-        {/* Right column for Volunteer Work and Skills */}
+                {/* Right column for Volunteer Work and Skills */}
         <Col xs={12} md={6} className="Col">
           <div className="about_card">
             <h2>Volunteer Work</h2>
             <p>
-              {/* Volunteer work details */}
+              <strong>Solidarity worker in Mozambique</strong><br />
+              2003<br />
+              Organizing and training volunteer teachers to educate families on topics such as hygiene, diseases, sanitation, and AIDS.
+            </p>
+            <p>
+              <strong>Special needs teacher in Ghana</strong><br />
+              2015<br />
+              Inclusive Learning Support: Assist students with special needs in an inclusive classroom setting, adapting lessons and providing personalized help.
             </p>
           </div>
           <div className="about_card">
             <h2>Skills</h2>
             <div className="skills_container">
-              {/* Map through the skills array and display each skill */}
               {skills.map((skill, index) => (
                 <div className="skill" key={index}>
                   <img src={`./icons/${skill.icon}`} alt={skill.title} />
