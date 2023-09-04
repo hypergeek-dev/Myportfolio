@@ -105,12 +105,6 @@
         img {
           width: 100%;
         }
-        nav,
-        .flex-container {
-          margin-left: 0;
-          flex-direction: column;
-          align-items: flex-start;
-        }
       }
 
 /* Navbar */
@@ -121,17 +115,25 @@
   position: fixed;
 top:0;
 }
+
+@media (max-width: 768px) {
+  .navDiv {
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+}
 /* gradient effect */
 
-.nav-link {
 
-  margin-right:2rem;
-}
+
+
 .nav-link p {
     padding: 1.25rem;
     font-family: 'Open Sans', sans-serif;
     color: rgb(255, 255, 255);  
-    font-size: 1.5rem;  
+    font-size: 1;  
     font-weight: 400; 
     letter-spacing: 1px;  
     padding: 1px;  
