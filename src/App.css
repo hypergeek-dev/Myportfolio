@@ -1,19 +1,29 @@
+/* Variables */
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Roboto Slab', sans-serif;
+  --main-color: #fff;
+}
+
+/* Font Face */
 @font-face {
   font-family: 'Montserrat';
   src: url('./Montserrat-VariableFont_wght.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Roboto Slab';
   src: url('./RobotoSlab-VariableFont_wght.ttf') format('truetype');
-
 }
 
+/* Global Styles */
+body {
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
 
-/* Global Font Rules */
-h1, h2, h3,h4, h5, h6, span {
-  font-family: 'Roboto Slab', sans-serif;
-  color: #fff;
- 
+h1, h2, h3, h4, h5, h6, span {
+  font-family: var(--secondary-font);
 }
 
 body, p, div, a, li, ul, ol {
@@ -21,8 +31,6 @@ body, p, div, a, li, ul, ol {
   color: #fff;
 
 }
-
-
 
 .nameWrapper {
   display: flex;
