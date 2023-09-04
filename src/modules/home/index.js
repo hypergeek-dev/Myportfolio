@@ -29,7 +29,7 @@ const Home = () => {
           index = 0;
           setCurrentLine((prevLine) => (prevLine + 1) % lines.length);
           typeLine();
-        }, 1000); // Wait time before clearing and typing next line
+        }, 1000); 
       }
     };
 
