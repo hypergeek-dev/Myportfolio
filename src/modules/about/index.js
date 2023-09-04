@@ -4,20 +4,21 @@ import { Container, Row, Col } from 'react-bootstrap';
 const About = () => {
   // List of skills and corresponding icons
   const skills = [
+    { title: 'HTML', icon: 'icons8-html-100.png' },
+    { title: 'CSS', icon: 'icons8-css-100.png' },
+    { title: 'JavaScript', icon: 'icons8-javascript-100.png' },
+    { title: 'React', icon: 'icons8-react-100.png' },
+    { title: 'Bootstrap', icon: 'icons8-bootstrap-100.png' },
+    { title: 'Django', icon: 'icons8-django-100.png' },
+    { title: 'Python', icon: 'icons8-python-100.png' },
+    { title: 'SQL', icon: 'icons8-sql-100.png' },
     { title: '.NET Framework', icon: 'icons8-.net-framework-100.png' },
     { title: 'ASP', icon: 'icons8-asp-100.png' },
     { title: 'Azure', icon: 'icons8-azure-100.png' },
-    { title: 'Bootstrap', icon: 'icons8-bootstrap-100.png' },
     { title: 'C++', icon: 'icons8-c++-100.png' },
-    { title: 'CSS', icon: 'icons8-css-100.png' },
-    { title: 'Django', icon: 'icons8-django-100.png' },
-    { title: 'HTML', icon: 'icons8-html-100.png' },
-    { title: 'JavaScript', icon: 'icons8-javascript-100.png' },
     { title: 'Git Merge', icon: 'icons8-merge-git-100.png' },
-    { title: 'Python', icon: 'icons8-python-100.png' },
-    { title: 'React', icon: 'icons8-react-100.png' },
-    { title: 'SQL', icon: 'icons8-sql-100.png' },
   ];
+  
 
   return (
     <Container className="about_container">
