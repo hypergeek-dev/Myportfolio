@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Home = () => {
-  const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.webp");
+  const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.png");
   const hoverImage = "https://www.binarymonk.online/profil_bw.png";
   const [typedText, setTypedText] = useState('');
   const [currentLine, setCurrentLine] = useState(0);
