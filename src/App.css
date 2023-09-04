@@ -108,11 +108,12 @@ body, p, div, a, li, ul, ol {
   display:flex;
   justify-content: space-evenly;
   text-decoration: none;
+  min-width: fit-content;
+
 }
 
 .social-icon i {
-  height:5vh;
-  width:3vw;
+  font-size: 1.5rem;
   color:#fff;
   border: 2px solid silver;
   border-radius: 50%;
@@ -143,12 +144,12 @@ body, p, div, a, li, ul, ol {
   .imgWrapper {
     width: 100%;
     justify-content: center;
+    z-index: 1;
   }
   .imgWrapper img {
     margin-right: 0;
   }
 }
-
 
 /* Navbar */
 .navDiv {
@@ -157,6 +158,7 @@ body, p, div, a, li, ul, ol {
   background-color: #000;
   position: fixed;
 top:0;
+z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -168,9 +170,6 @@ top:0;
   }
 }
 /* gradient effect */
-
-
-
 
 .nav-link p {
     padding: 1.25rem;
@@ -460,6 +459,7 @@ p:first-of-type {
   width:100%;
 position: fixed;
 bottom:0;
+z-index: 2;
 }
 
 .hire-me {
@@ -497,12 +497,10 @@ bottom:0;
   }
 }
 
-
 .footer .btn {
   margin: 0 30px; 
 
 }
-
 
 .footer span {
   font-size: 1rempx; 
@@ -510,16 +508,3 @@ bottom:0;
 color: #ffffff;
 }
     
-    .social-icon i {
-      font-size: 24px;
-      color: #000;
-      border: 2px solid silver;
-      border-radius: 50%;
-      padding: 10px;
-      transition: all 0.3s ease;
-    }
-    
-    .social-icon:hover i {
-      color: silver;
-      background-color: #000;
-    }
