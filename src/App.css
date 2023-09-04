@@ -306,27 +306,64 @@ Container Styling */
   
 #contact {
 
-    height: 100%;
-    text-align: center; 
-    max-width: 100%;
-    margin-top:10vh;
-  }
-  
-  .section-header {
-    text-align: center;
-    margin: 0 auto;
-    font: 300 60px 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-  }
-  
- .contact-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;  
+  height: 100%;
+  text-align: center; 
+  max-width: 100%;
+  margin-top:12vh;
 }
-  
-  
+
+#contact h1 {
+margin-bottom:3vh;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+display: flex;
+flex-direction: row;
+justify-content: center;  
+}
+.form-control
+{
+width:20vw;
+min-width:280px;
+background-color: transparent;
+border:5px solid rgb(70, 70, 70);
+margin-bottom:1rem;
+box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+-webkit-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+-moz-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+color:#fff;
+}
+.form-control:focus {
+border-color:silver;
+box-shadow:none;
+background-color:transparent;
+color:silver;
+}
+
+.btn {
+background-color: transparent;
+border:5px solid rgb(70, 70, 70);
+border-radius: 15px;
+}
+
+.btn:hover{
+background-color: transparent;
+border:5px solid silver;
+border-radius: 15px;
+}
+.btn:active {
+background-color: silver;
+border:5px solid rgb(255, 255, 255);
+border-radius: 15px;
+color: black;
+}
   
 /* Footer */
 .footer {

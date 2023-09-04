@@ -5,27 +5,27 @@ import React from 'react';
 const Contact = () => {
   return (
     <section id="contact">
-      <h1 class="section-header">Contact</h1>
-      <div class="contact-wrapper">
-        <form id="contact-form" class="form-horizontal">
-          <div class="form-group">
-            <div class="col-sm-12">
-              <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="Name" required />
+      <h1 className="section-header">Contact</h1>
+      <div className="contact-wrapper">
+        <form id="contact-form" className="form-horizontal">
+          <div className="form-group">
+            <div className="col-sm-12">
+              <input type="text" className="form-control" id="name" placeholder="NAME" name="name" value="Name" required />
             </div>
           </div>
 
-          <div class="form-group">
-            <div class="col-sm-12">
-              <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="E-mail" required />
+          <div className="form-group">
+            <div className="col-sm-12">
+              <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" value="E-mail" required />
             </div>
           </div>
 
-          <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" value="Message" required />
+          <textarea className="form-control" rows="10" placeholder="MESSAGE" name="message" value="Message" required />
 
-          <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-  <div class="button-wrapper">  
-    <div class="alt-send-button">
-      <i class="fa fa-paper-plane"></i><span class="send-text">Send</span>
+          <button className="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+  <div className="button-wrapper">  
+    <div className="alt-send-button">
+      <i className="fa fa-paper-plane"></i><span className="send-text">Send</span>
     </div>
   </div>
 </button>
