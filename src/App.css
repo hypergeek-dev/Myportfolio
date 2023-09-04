@@ -184,57 +184,72 @@ top:0;
       }
   }
 
-/* About module -
-Container Styling */
-.Container {
-  margin-top:20vh;
-    width: fit-content;
-    max-width: 60%;
-    border-radius:15px;
-    font-weight: 400;
-  }
-  
-  /* Column Styling */
-  .Col {
-    padding: 1rem;
-
-  }
-  
-  /* Header Styling */
-  h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-  }
-  
-  /* Paragraph Styling */
-  p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ffffff;
-  }
-  
-  /* First Paragraph Styling */
-  p:first-of-type {
-    margin-bottom: 1rem;
-  }
-/* Wrapper styling */
-.img_wrapper {
-  display: flex;
-  justify-content: center; 
-  margin-top:4rem;
-  width: 100%;
-
+/* Header Styling */
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
+h2 {
+  color: #ffffff;
+}
 
+/* Paragraph Styling */
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
 
-/* Image styling */
-.img_wrapper img {
-  width: 80%;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+/* First Paragraph Styling */
+p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+/* About Page Card Styles */
+.about_card {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.about_card h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.about_card p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .Container {
+    max-width: 100%;
+  }
+  .Col {
+    padding: 0.5rem;
+  }
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .about_card h2 {
+    font-size: 1.5rem;
+  }
+  .about_card p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Portfolio module */

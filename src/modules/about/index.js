@@ -1,22 +1,30 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-
 const About = () => {
   return (
     <Container className="Container">
       <Row className="Row">
         <Col xs={12} md={6} className="Col">
-          <div className="text_wrapper">
-            <h1>About me</h1>
-            <p>Hey there! I'm Dennis Jensen, and I'm a Junior Full Stack Developer who's really into both tech and teaching. I've got a postgrad degree in education, which gives me a unique way of tackling coding challenges. I'm good with HTML, CSS, and Javascript, but I've also played around with Python and know my way around Bootstrap. I'm familiar with Git and Github for version control too.</p>
-            <p>Outside of work, I've done a bunch of different things. I've worked as a care assistant, looking after people's well-being. Right now, I'm leveling up my coding skills at the Code Institute in Dublin. Just so you know, I can drive, I help out with the tech stuff at my church, and I can speak English, Danish, and Swedish. I'm excited about blending my background in education with my love for coding, and I'd love to chat about how we can make some really cool digital stuff together.</p>
-            </div>
+          <div className="about_card">
+            <h2>About Me</h2>
+            <p>Hi, there! I am a highly motivated Software Developer. Coming from a postgraduate in Pedagogics and a passion for IT and a strong desire to transition into a software development career. Seeking a challenging position as a Software Developer where I can leverage my educational background, teamwork skills, and problem-solving abilities to deliver innovative solutions to customers.</p>          </div>
+          <div className="about_card">
+            <h2>Education</h2>
+            <p>Dec 2022 -  PresentCode Institute 	Dublin, Ireland (Remote) - Diploma in Fullstack Software Development</p>
+            <p>July 2023 - Present</p><p>Lexicon – Malmö .NET Developer.</p>
+            <p>Sept 2012 - March 2016</p><p>	University of Campus Kolding, Denmark – Postgraduate in pedagogics</p>
+          </div>
         </Col>
         <Col xs={12} md={6} className="Col">
-          <div className="img_wrapper">
-            <img src="https://binarymonk.online/aboutme.webp" alt="Dennis Jensen" />
+          <div className="about_card">
+            <h2>Volunteer Work</h2>
+            <p>Solidarity worker in Mozambique 2003</p>
+            <p> Organizing and training volunteer teachers to educate families in Mozambique on topics such as hygiene, diseases, sanitation, and AIDS.</p>
+            <p>Special needs teacher in Ghana 2015.</p>
+            <p>Inclusive Learning Support: Assist students with special needs in an inclusive classroom setting, adapting lessons and providing personalized help.</p>
           </div>
+
         </Col>
       </Row>
     </Container>
@@ -24,8 +32,3 @@ const About = () => {
 };
 
 export default About;
-
-
-
-
-
