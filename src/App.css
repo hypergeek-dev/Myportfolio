@@ -292,6 +292,7 @@ p:first-of-type {
     display: flex;
     flex-wrap: wrap; 
     align-items: flex-start; 
+   justify-content: space-evenly;
     margin-bottom:10vh;
 }
 
