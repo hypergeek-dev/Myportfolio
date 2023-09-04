@@ -16,7 +16,7 @@ const About = () => {
     { title: 'ASP', icon: 'icons8-asp-100.png' },
     { title: 'Azure', icon: 'icons8-azure-100.png' },
     { title: 'C++', icon: 'icons8-c++-100.png' },
-    { title: 'Git Merge', icon: 'icons8-merge-git-100.png' },
+    { title: 'Git', icon: 'icons8-merge-git-100.png' },
   ];
   
 

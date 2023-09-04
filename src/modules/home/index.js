@@ -43,18 +43,24 @@ const Home = () => {
   return (
     <div className="position-absolute start-0 flex-container">
       <div className="nameWrapper">
-        <h1><span className="letter_large">D</span>ennis Jensen</h1>
-        <h5>{typedText}</h5>
+          <h1><span className="letter_large">D</span>ennis Jensen</h1>
+          <h5>{typedText}</h5>
+          <div className="d-flex justify-content-center">
+            <a href="https://www.linkedin.com/in/dennis-mariegaard-jensen-a974a8287/" className="social-icon mx-2">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/hypergeek-dev/" className="social-icon mx-2">
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
       </div>
       <div className="imgWrapper">
-      <div className="gradient-border">
         <img 
           src={imageSrc} 
           alt="My profile"
           onMouseEnter={() => setImageSrc(hoverImage)}
           onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")}
         />
-         </div>
       </div>
     </div>
   );

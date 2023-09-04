@@ -44,6 +44,7 @@ const Footer = () => {
       <Button variant="secondary" onClick={handleNext} disabled={currentModuleIndex === modules.length - 1}>
         Next <i className="fas fa-arrow-right"></i>
       </Button>
+      <div className="hire-me">HIRE ME!</div> {/* This line was corrected */}
     </footer>
   );
 };
