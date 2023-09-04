@@ -463,8 +463,11 @@ bottom:0;
   right: 5vw;
   top: 50%;
   transform: translateY(-50%) rotate(-80deg);
+  color: #000;  /* Fallback color */
   background: linear-gradient(90deg, red, orange, yellow);
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   color: transparent;
   animation: gradient-animation 5s infinite linear;
 }
