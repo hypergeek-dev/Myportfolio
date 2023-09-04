@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('./RobotoSlab-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Global Font Rules */
+h1, h2, h3,h4, h5, h6, span {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+body, p, div, a, li, ul, ol {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 .nameWrapper {
   display: flex;
   flex-direction: column;
@@ -7,7 +31,6 @@
 }
 
 .nameWrapper h1 {
-  font-family: 'Bevan', cursive;
   font-size: 350%;
   width: 100%;
 }
@@ -119,7 +142,6 @@ top:0;
 
 .nav-link p {
     padding: 1.25rem;
-    font-family: 'Open Sans', sans-serif;
     color: rgb(255, 255, 255);  
     font-size: 1;  
     font-weight: 400; 
@@ -176,7 +198,6 @@ top:0;
 
 /* Header Styling */
 h1 {
-  font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
   color: #ffffff;
   margin-bottom: 1rem;
@@ -188,7 +209,6 @@ h2 {
 
 /* Paragraph Styling */
 p {
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: #ffffff;
@@ -213,7 +233,6 @@ p:first-of-type {
 }
 
 .about_card h2 {
-  font-family: 'Oswald', sans-serif;
   font-size: 2rem;
   color: #ffffff;
   margin-top: 0;
