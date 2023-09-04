@@ -7,6 +7,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 function NavigationBar() {
   return (
     <div className="container-fluid navDiv">
+      
       <Navbar variant="dark">
         <Nav>
           <Nav.Link as={Link} to="/"><p>Home</p></Nav.Link>

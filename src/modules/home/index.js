@@ -47,12 +47,14 @@ const Home = () => {
         <h5>{typedText}</h5>
       </div>
       <div className="imgWrapper">
+      <div className="gradient-border">
         <img 
           src={imageSrc} 
           alt="My profile"
           onMouseEnter={() => setImageSrc(hoverImage)}
           onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")}
         />
+         </div>
       </div>
     </div>
   );
