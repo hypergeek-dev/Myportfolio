@@ -305,15 +305,14 @@ Container Styling */
 /* Contact module */
   
 #contact {
-
   height: 100%;
   text-align: center; 
   max-width: 100%;
-  margin-top:12vh;
+  margin-top: 12vh;
 }
 
 #contact h1 {
-margin-bottom:3vh;
+  margin-bottom: 3vh;
 }
 
 .section-header {
@@ -324,46 +323,53 @@ margin-bottom:3vh;
 }
 
 .contact-wrapper {
-display: flex;
-flex-direction: row;
-justify-content: center;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
 }
-.form-control
-{
-width:20vw;
-min-width:280px;
-background-color: transparent;
-border:5px solid rgb(70, 70, 70);
-margin-bottom:1rem;
-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
--webkit-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
--moz-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
-color:#fff;
+
+.form-control {
+  width: 20vw;
+  min-width: 280px;
+  background-color: transparent;
+  border: 5px solid rgb(70, 70, 70);
+  margin-bottom: 1rem;
+  box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+  -webkit-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+  -moz-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+  color: #fff;
+}
+
+#contact .form-control::placeholder {
+  color:silver ;
+  opacity: 1;
 }
 .form-control:focus {
-border-color:silver;
-box-shadow:none;
-background-color:transparent;
-color:silver;
+  border-color: silver;
+  box-shadow: none;
+  background-color: transparent;
+  color: silver;
 }
 
 .btn {
-background-color: transparent;
-border:5px solid rgb(70, 70, 70);
-border-radius: 15px;
+  background-color: transparent;
+  border: 5px solid rgb(70, 70, 70);
+  border-radius: 15px;
 }
 
-.btn:hover{
-background-color: transparent;
-border:5px solid silver;
-border-radius: 15px;
+.btn:hover {
+  background-color: transparent;
+  border: 5px solid silver;
+  border-radius: 15px;
 }
+
 .btn:active {
-background-color: silver;
-border:5px solid rgb(255, 255, 255);
-border-radius: 15px;
-color: black;
+  background-color: silver;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  color: black;
 }
+
   
 /* Footer */
 .footer {
