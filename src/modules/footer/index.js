@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useNavigate, useLocation } from 'react-router-dom';
 
+// Define the modules and their corresponding paths
 const modules = [
   { path: '/', name: 'Home' },
   { path: '/about', name: 'About' },
@@ -10,10 +11,14 @@ const modules = [
 ];
 
 const Footer = () => {
+  // Initialize React Router hooks
   const navigate = useNavigate();
   const location = useLocation();
+
+  // State to keep track of the current module index
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
 
+  // Effect to update the current module index based on the current path
   useEffect(() => {
     const index = modules.findIndex(module => module.path === location.pathname);
     if (index !== -1) {
@@ -21,6 +26,7 @@ const Footer = () => {
     }
   }, [location.pathname]);
 
+  // Handler for the "Prev" button
   const handlePrev = () => {
     if (currentModuleIndex > 0) {
       setCurrentModuleIndex(currentModuleIndex - 1);
@@ -28,6 +34,7 @@ const Footer = () => {
     }
   };
 
+  // Handler for the "Next" button
   const handleNext = () => {
     if (currentModuleIndex < modules.length - 1) {
       setCurrentModuleIndex(currentModuleIndex + 1);
@@ -37,14 +44,18 @@ const Footer = () => {
 
   return (
     <footer className="footer d-flex justify-content-center align-items-center">
+      {/* "Prev" button */}
       <Button variant="secondary" onClick={handlePrev} disabled={currentModuleIndex === 0}>
         <i className="fas fa-arrow-left"></i> Prev
       </Button>
+      {/* Display the name of the current module */}
       <span className="mx-3">{modules[currentModuleIndex].name}</span>
+      {/* "Next" button */}
       <Button variant="secondary" onClick={handleNext} disabled={currentModuleIndex === modules.length - 1}>
         Next <i className="fas fa-arrow-right"></i>
       </Button>
-      <div className="hire-me">HIRE ME!</div> {/* This line was corrected */}
+      {/* "Hire Me" section */}
+      <div className="hire-me">HIRE ME!</div>
     </footer>
   );
 };

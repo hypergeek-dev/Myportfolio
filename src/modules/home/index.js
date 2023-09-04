@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
 const Home = () => {
+  // State to manage the source of the profile image
   const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.png");
+  // Hover image URL
   const hoverImage = "https://www.binarymonk.online/profil_bw.png";
+  // State to manage the text being typed
   const [typedText, setTypedText] = useState('');
+  // State to manage the current line being typed
   const [currentLine, setCurrentLine] = useState(0);
 
+  // Effect to handle typing animation
   useEffect(() => {
     const lines = [
       'I\'m a coder!',  
@@ -17,6 +22,7 @@ const Home = () => {
     let index = 0;
     let timeoutId;
 
+    // Function to type a line
     const typeLine = () => {
       const line = lines[currentLine];
       if (index <= line.length) {
@@ -35,6 +41,7 @@ const Home = () => {
 
     typeLine();
 
+    // Cleanup function to clear the timeout
     return () => {
       clearTimeout(timeoutId);
     };
@@ -42,9 +49,11 @@ const Home = () => {
 
   return (
     <div className="position-absolute start-0 flex-container">
+      {/* Name and typed text */}
       <div className="nameWrapper">
           <h1><span className="letter_large">D</span>ennis Jensen</h1>
           <h5>{typedText}</h5>
+          {/* Social media icons */}
           <div className="d-flex justify-content-center">
             <a href="https://www.linkedin.com/in/dennis-mariegaard-jensen-a974a8287/" className="social-icon mx-2">
               <i className="fab fa-linkedin-in"></i>
@@ -54,12 +63,13 @@ const Home = () => {
             </a>
           </div>
       </div>
+      {/* Profile image */}
       <div className="imgWrapper">
         <img 
           src={imageSrc} 
           alt="My profile"
-          onMouseEnter={() => setImageSrc(hoverImage)}
-          onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")}
+          onMouseEnter={() => setImageSrc(hoverImage)} 
+          onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")} 
         />
       </div>
     </div>
