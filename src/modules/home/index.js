@@ -41,7 +41,7 @@ const Home = () => {
   }, [currentLine]);
 
   return (
-    <div className="position-absolute rounded start-0 custom-top-center flex-container">
+    <div className="position-absolute start-0 flex-container">
       <div className="nameWrapper">
         <h1><span className="letter_large">D</span>ennis Jensen</h1>
         <h5>{typedText}</h5>
