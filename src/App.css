@@ -355,6 +355,7 @@ Container Styling */
   background-color: transparent;
   border: 5px solid rgb(70, 70, 70);
   border-radius: 15px;
+  color: silver;
 }
 
 .btn:hover {
