@@ -43,8 +43,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer d-flex justify-content-center align-items-center">
+    <footer className="footer d-flex">
+
       {/* "Prev" button */}
+      <div className="pagination">
       <Button variant="secondary" onClick={handlePrev} disabled={currentModuleIndex === 0}>
         <i className="fas fa-arrow-left"></i> Prev
       </Button>
@@ -54,8 +56,9 @@ const Footer = () => {
       <Button variant="secondary" onClick={handleNext} disabled={currentModuleIndex === modules.length - 1}>
         Next <i className="fas fa-arrow-right"></i>
       </Button>
+      </div>
       {/* "Hire Me" section */}
-      <div className="hire-me">HIRE ME!</div>
+      <div className="hire_me"><p>HIRE ME!</p></div>
     </footer>
   );
 };
