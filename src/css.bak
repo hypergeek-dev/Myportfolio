@@ -462,33 +462,37 @@ p:first-of-type {
   
 .footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center; /* Added for vertical centering */
+  justify-content: space-evenly;
+
+  align-items: center; 
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #000;
   z-index: 2;
-  padding-top: 0.25rem;
-  padding-bottom: 1rem;
+  padding-top:0;
+  padding-bottom:1vh;
+
 }
 
 .pagination, .hire-me {
   display: flex;
-  flex: 1;
   text-align: center;
-  padding: 0 1rem;
-  margin-top: 1vh;
   align-items: center; 
+padding:10px;
 }
 
 .hire_me p {
   display: flex; 
   align-items: center; 
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 600;
-  background: linear-gradient(90deg, red, orange, yellow);
+  background-image: linear-gradient(to right, red, orange, yellow, orange, red);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: transparent;
+  animation: gradientAnimation 3s infinite;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -503,5 +507,11 @@ p:first-of-type {
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hire_me p { 
+      padding-left:15vw;
   }
 }

@@ -15,7 +15,7 @@ const About = () => {
     { title: '.NET Framework', icon: 'icons8-.net-framework-100.png' },
     { title: 'ASP', icon: 'icons8-asp-100.png' },
     { title: 'Azure', icon: 'icons8-azure-100.png' },
-    { title: 'C++', icon: 'icons8-c++-100.png' },
+    { title: 'C#', icon: 'icons8-c-sharp-64.png' },
     { title: 'Git', icon: 'icons8-merge-git-100.png' },
   ];
   
