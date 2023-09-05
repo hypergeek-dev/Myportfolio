@@ -475,13 +475,13 @@ p:first-of-type {
 
 .pagination, .hire-me {
   display: flex;
-  flex: 1;
   text-align: center;
   padding: 1rem 1rem 0 1rem;
   margin-top: 1vh;
   align-items: center; 
-  width:50%;
+
 }
+
 
 .hire_me p {
   display: flex; 
@@ -489,7 +489,7 @@ p:first-of-type {
   font-size: 1.5rem;
   text-align: center;
   font-weight: 600;
-  width:10vw;
+
   background: linear-gradient(90deg, red, orange, yellow);
   -webkit-background-clip: text;
   -moz-background-clip: text;
