@@ -127,31 +127,7 @@
     background-color: #000;
   }
   
-  @media screen and (max-width: 1090px) {
-    .flex-container {
-      flex-direction: column;
-      align-items: center;
-  
-    }
-    .nameWrapper {
-      width: 100%;
-      text-align: center;}
-  
-      .nameWrapper h1 {
-        font-size: 200%;
-        width:100%
-      }
-  
-    .imgWrapper {
-      width: 100%;
-      justify-content: center;
-      z-index: 1;
-    }
-    .imgWrapper img {
-      margin-right: 0;
-      margin-bottom:20vh;
-    }
-  }
+
   
   /* Navbar */
   .navDiv {
@@ -167,18 +143,6 @@
     border: 4px solid;
     border-image: linear-gradient(90deg, red, orange, yellow);
     border-image-slice: 1;
-  }
-  @media (max-width: 768px) {
-    .flex-container {
-
-        margin-top: 32vh;
-      }
-    .navDiv {
-      flex-wrap: wrap;
-    }
-    .nav-link {
-      font-size: 1rem;
-    }
   }
   /* gradient effect */
   
@@ -228,16 +192,7 @@
       }
     }
     
-    /* Media query for screens above 768px */
-    @media (max-width: 768px) {
-      .nav-link {
-        margin-right:0; }
-        .nav-link:hover p {
-  
-          transform: scale(1.25);
-        }
-    }
-  
+
   /* Header Styling */
   h1 {
     font-size: 2.5rem;
@@ -305,27 +260,7 @@
   .skill p {
     margin-top: 5px;
   }
-  /* Media Query for smaller screens */
-  @media screen and (max-width: 768px) {
-    .about_container {
-      max-width: 100%;
-    }
-    .Col {
-      padding: 0.5rem;
-    }
-    h1, h2 {
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 0.9rem;
-    }
-    .about_card h2 {
-      font-size: 1.5rem;
-    }
-    .about_card p {
-      font-size: 0.9rem;
-    }
-  }
+
   
   /* Portfolio module */
   
@@ -366,8 +301,6 @@
       font-weight: 300;
     }
   
-  
-  
     .icon-link {
       font-size: 24px;
       color: #9f9f9f;
@@ -388,11 +321,6 @@
       width:100%;
     }
   
-    @media screen and (max-width: 768px) {
-      .project-container {
-          width: 90%;
-      }
-  }
   
   /* Contact module */
     
@@ -517,20 +445,74 @@
       background-position: 100% 50%;
     }
   }
-  /* Media query for small devices */
+/* Media query for small devices */
 @media (max-width: 768px) {
-    .footer {
-      height: auto; 
-      min-height: 7.5vh; 
-
-    }
-    .hire_me p {
-        margin-left:15vw;
-      font-size: 1rem;  
-    }
-    .pagination
-    {
-      margin-left:20vw;
-      padding-bottom:1vh;
-    }
+  .footer {
+    height: auto;
+    min-height: 7.5vh;
   }
+  .hire_me p {
+    margin-left: 15vw;
+    font-size: 1rem;
+  }
+  .pagination {
+    margin-left: 20vw;
+    padding-bottom: 1vh;
+  }
+  .flex-container {
+    margin-top: 32vh;
+  }
+  .navDiv {
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+  .nav-link:hover p {
+    transform: scale(1.25);
+  }
+  .about_container {
+    max-width: 100%;
+  }
+  .Col {
+    padding: 0.5rem;
+  }
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .about_card h2 {
+    font-size: 1.5rem;
+  }
+  .project-container {
+    width: 90%;
+  }
+}
+
+/* Media query for screens up to 1090px */
+@media screen and (max-width: 1090px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nameWrapper {
+    width: 100%;
+    text-align: center;
+  }
+  .nameWrapper h1 {
+    font-size: 200%;
+    width: 100%;
+  }
+  .imgWrapper {
+    width: 100%;
+    justify-content: center;
+    z-index: 1;
+  }
+  .imgWrapper img {
+    margin-right: 0;
+    margin-bottom: 20vh;
+  }
+}
