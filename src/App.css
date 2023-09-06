@@ -240,6 +240,7 @@
   .about_card p {
     margin-bottom: 1rem;
     line-height: 1.5;
+    font-weight:300;
   }
   .skills_container {
     display: flex;
