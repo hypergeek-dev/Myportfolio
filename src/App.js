@@ -3,13 +3,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import './App.css'; 
 import NavigationBar from './modules/navbar/';
 import Home from './modules/home/';
 import Footer from './modules/footer/';
 import About from './modules/about/';
 import Portfolio from './modules/portfolio/';
 import Contact from './modules/contact/';
+import './App.css'; 
 
 function App() {
   return (

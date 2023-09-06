@@ -62,8 +62,7 @@ const Footer = () => {
           </div>
           {/* Right Div */}
           <div className="right-div col-6">
-            {/* "Hire Me" section */}
-            <div className="hire_me"><p>HIRE ME!</p></div>
+
           </div>
         </div>
     </footer>
