@@ -1,5 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
+
+// SkillCard Component for rendering individual skills
+const SkillCard = ({ skill }) => (
+  <div className="skill">
+    <img src={`./icons/${skill.icon}`} alt={skill.title} />
+    <p>{skill.title}</p>
+  </div>
+);
+
+SkillCard.propTypes = {
+  skill: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 const About = () => {
   // List of skills and corresponding icons
@@ -18,8 +34,7 @@ const About = () => {
     { title: 'C#', icon: 'icons8-c-sharp-64.png' },
     { title: 'Git', icon: 'icons8-merge-git-100.png' },
   ];
-  
-  // Render the About component
+
   return (
     <Container className="about_container">
       <Row className="Row">
@@ -27,7 +42,7 @@ const About = () => {
           <div className="about_card">
             <h2>About Me</h2>
             <p>
-              Hi, there!<br />I am a highly motivated Software Developer with a postgraduate degree in Pedagogics. I have a passion for IT and a strong desire to transition into a software development career. I am seeking a challenging position where I can leverage my educational background, teamwork skills, and problem-solving abilities to deliver innovative solutions to customers.
+              Hi, there!<br />I am a highly motivated Software Developer with a postgraduate degree in Pedagogics. I am a nerd at heart, therefore I decided to transition into a software development career. I am seeking a challenging position where I can both use my pedagogical background for teamwork skills and understanding customer needs. I love being creative with concepts and thinking outside the box.
             </p>
           </div>
           <div className="about_card">
@@ -49,7 +64,6 @@ const About = () => {
             </p>
           </div>
         </Col>
-                {/* Right column for Volunteer Work and Skills */}
         <Col xs={12} md={6} className="Col">
           <div className="about_card">
             <h2>Volunteer Work</h2>
@@ -68,10 +82,7 @@ const About = () => {
             <h2>Skills</h2>
             <div className="skills_container">
               {skills.map((skill, index) => (
-                <div className="skill" key={index}>
-                  <img src={`./icons/${skill.icon}`} alt={skill.title} />
-                  <p>{skill.title}</p>
-                </div>
+                <SkillCard key={index} skill={skill} />
               ))}
             </div>
           </div>
