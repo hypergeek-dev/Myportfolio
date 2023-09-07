@@ -48,11 +48,19 @@ const Home = () => {
   }, [currentLine]);
 
   return (
-    <div className="position-absolute start-0 flex-container">
+    <div className="flex-container">
+            <div className="imgWrapper">
+        <img 
+          src={imageSrc} 
+          alt="My profile"
+          onMouseEnter={() => setImageSrc(hoverImage)} 
+          onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")}/>
+      </div>
       {/* Name and typed text */}
-      <div className="nameWrapper">
-          <h1><span className="letter_large">D</span>ennis Jensen</h1>
-          <h5>{typedText}</h5>
+      <div className="animated_text">
+         
+          <h1>{typedText}</h1>
+          </div>
           {/* Social media icons */}
           <div className="d-flex justify-content-center">
             <a href="https://www.linkedin.com/in/dennis-mariegaard-jensen-a974a8287/" className="social-icon mx-2">
@@ -62,17 +70,10 @@ const Home = () => {
               <i className="fab fa-github"></i>
             </a>
           </div>
-      </div>
-      {/* Profile image */}
-      <div className="imgWrapper">
-        <img 
-          src={imageSrc} 
-          alt="My profile"
-          onMouseEnter={() => setImageSrc(hoverImage)} 
-          onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")} 
-        />
-      </div>
-    </div>
+
+
+</div>
+
   );
 };
 

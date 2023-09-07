@@ -20,8 +20,23 @@
   body {
     font-family: var(--main-font);
     color: var(--main-color);
+    background-image: url('./assets/graphic/background.webp');
+
+    /* Cover the entire viewport */
+    background-size: cover;
+  
+    /* Center the background image */
+    background-position: center center;
+  
+    /* Make sure the background image doesn't move when scrolling */
+    background-attachment: fixed;
+  
+    /* Set background color as fallback */
+    background-color: #000;
+   
   }
   
+
   h1, h2, h3, h4, h5, h6, span {
     font-family: var(--secondary-font);
   }
@@ -32,16 +47,17 @@
   
   }
   
-  .nameWrapper {
+  .animated_text {
     display: flex;
+    align-self: center;
     flex-direction: column;
     width: 50%;
     justify-content: center;
     text-align: center;
   }
   
-  .nameWrapper h1 {
-    font-size: 350%;
+  .animated_text h1 {
+    font-size: 250%;
     width: 100%;
   }
   
@@ -72,53 +88,58 @@
   
   .imgWrapper {
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    width: 100%;
     justify-content: center;
-    position: relative;
-  }
+    text-align: center;
+    }
   
-  .nameWrapper h5 {
+  .animated_text h5 {
     width: 100%;
   }
   
   .imgWrapper img {
+    align-self: center;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
                 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
                 0 12.5px 10px rgba(0, 0, 0, 0.06),
                 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
                 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
                 0 100px 80px rgba(0, 0, 0, 0.12);
-    min-height: 200px;
-    width: 65%;
-    background: white;
-    border-radius: 5px;
+    min-height: 35vh;
+    width: 15vw;
+    border-radius: 50%;
     z-index: 1; 
-    
-  }
+    border: 10px solid rgba(47, 128, 0, 0.773); }
   
   .flex-container {
+    height:100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 25vh;
-    margin-bottom:35vh;
   }
-  
+  .d-flex {
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+
+  }
   .social-icon {
     display:flex;
     justify-content: space-evenly;
     text-decoration: none;
     min-width: fit-content;
+    width:100%; 
   
   }
   
   .social-icon i {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color:#fff;
     border: 2px solid silver;
     border-radius: 50%;
-    padding: 10px;
+    padding: 0.5rem;
     transition: all 0.3s ease;
   }
   
@@ -130,33 +151,93 @@
 
   
   /* Navbar */
+
+ 
   .navDiv {
     display:flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: end  ;
     background-color: #000;
     position: fixed;
-  top:0;
+    top:0;
   z-index: 2;
+  opacity:0.7;
+ justify-content: space-between;
   }
-  /* Gradient border */
-  .gradient-border {
-    border: 4px solid;
-    border-image: linear-gradient(90deg, red, orange, yellow);
-    border-image-slice: 1;
+
+  .nav-link {
+   margin-right:0.5rem;
   }
+
+  .navDiv p {
+    margin:0;
+    padding:0;
+  }
+
   /* gradient effect */
   
   
-  .nav-link p {
-      padding: 1.25rem;
-      font-size: 1;  
-      font-weight: 400; 
-      letter-spacing: 1px;  
-      padding: 1px;  
-      -webkit-text-stroke-color: transparent;
-      -webkit-text-stroke-width: 2px;  
-      transition: background-image 2s, color 2s, transform 0.3s;
-    }
+  .glow-on-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+   
+}
+
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
     .smokey_transition {
       position: absolute;
       bottom: 0;
@@ -164,34 +245,7 @@
       right: 0;
       height: 10px;
       background: linear-gradient(to top, rgba(27, 27, 27, 0.7), transparent);
-      backdrop-filter: blur(10px); 
-  
-    }
-    /* Hover effect */
-    .nav-link:hover p {
-      background-clip: text;
-      background-image: linear-gradient(to right, red, orange, yellow);
-      background-size: 200% 100%;
-      background-position: 100% 0;
-      color: transparent;
-      animation: gradientAnimation 3s infinite;
-      transform: scale(1.5);
-    }
-  
-    
-    /* Animation for hover effect */
-    @keyframes gradientAnimation {
-      0% {
-        background-position: 100% 0;
-      }
-      50% {
-        background-position: 0 0;
-      }
-      100% {
-        background-position: 100% 0;
-      }
-    }
-    
+      backdrop-filter: blur(10px);  }
 
   /* Header Styling */
   h1 {
@@ -205,29 +259,29 @@
   }
   
   /* Paragraph Styling */
-  p {
+  .project-description p {
     font-size: 1rem;
     line-height: 1.6;
     color: #ffffff;
   }
   
-  /* First Paragraph Styling */
-  p:first-of-type {
-    margin-bottom: 1rem;
-  }
-  
   /* About Page */
-  
-  .about_container{
-    margin-top:15vh;
-    padding-bottom: 75px;
+  .about_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
   }
+  
+ 
   .about_card {
     background-color: rgb(54, 54, 54);
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: 10px;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
+    width:40vw;
+ min-width:300px;
   }
   
   .about_card h2 {
@@ -235,10 +289,12 @@
     color: #ffffff;
     margin-top: 0;
     margin-bottom: 1rem;
+    margin-left:1vw;
   }
   
   .about_card p {
-    margin-bottom: 1rem;
+    margin-bottom: 1vh;
+    margin-left:1vw;
     line-height: 1.5;
     font-weight:300;
   }
@@ -246,6 +302,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
   }
   
   .skill {
@@ -269,9 +326,9 @@
       display: flex;
       flex-wrap: wrap; 
       align-items: flex-start; 
-     justify-content: space-evenly;
-     margin-top:5vh;
-      padding-bottom: 115px;      
+     justify-content: center;
+height:100%;
+margin-top:15vh;    
   }
   
   .project-container {
@@ -308,13 +365,7 @@
       padding: 5px;
       transition: all 0.3s ease;
     }
-    .d-flex {
-      display: flex;
-      justify-content: center; 
-      align-items: center;      
-      padding: 2rem 0;
-  
-    }
+
     .subcategori {
       display:flex;
       justify-content: flex-start;
@@ -393,59 +444,7 @@
     color: black;
   }
   
-    
-.footer {
 
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #000;
-  z-index: 2;
-  height: 7.5vh;
-}
-
-.left-div, .right-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;  /* Center vertically */
-  text-align: center;
-  padding-top:2vh;
-}
-
-.pagination, .hire_me {
-  display: flex;
-  text-align: center;
-  align-items: center; 
-}
-
-.hire_me p {
-    margin: 0;
-    padding:2px;
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: 600;
-    background-image: linear-gradient(to right, red, orange, yellow, orange, red);
-    background-size: 200% 100%;
-    background-position: 100% 0;
-    color: transparent;
-    animation: gradientAnimation 3s infinite;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: gradient-animation 5s infinite linear;
-    border: 2px solid silver;
-    border-radius:15px;
-  }
-  /* Animation for gradient */
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
 /* Media query for small devices */
 @media (max-width: 768px) {
   .footer {
@@ -468,7 +467,6 @@
   }
   .nav-link {
     font-size: 1rem;
-    margin-right: 0;
   }
   .nav-link:hover p {
     transform: scale(1.25);

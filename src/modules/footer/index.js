@@ -44,27 +44,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-        <div className="row">
-          {/* Left Div */}
-          <div className="left-div col-6">
-            {/* Pagination */}
-            <div className="pagination">
-              <Button variant="secondary pagination-btn" onClick={handlePrev} disabled={currentModuleIndex === 0}>
-                <i className="fas fa-arrow-left"></i> Prev
-              </Button>
-              {/* Display the name of the current module */}
-              <span className="mx-3">{modules[currentModuleIndex].name}</span>
-              {/* "Next" button */}
-              <Button variant="secondary" onClick={handleNext} disabled={currentModuleIndex === modules.length - 1}>
-                Next <i className="fas fa-arrow-right"></i>
-              </Button>
-            </div>
-          </div>
-          {/* Right Div */}
-          <div className="right-div col-6">
 
-          </div>
-        </div>
     </footer>
   );
 };

@@ -36,7 +36,7 @@ const About = () => {
   ];
 
   return (
-    <Container className="about_container">
+    <section className="about_wrapper">
       <Row className="Row">
         <Col xs={12} md={6} className="Col">
           <div className="about_card">
@@ -88,7 +88,7 @@ const About = () => {
           </div>
         </Col>
       </Row>
-    </Container>
+    </section>
   );
 };
 

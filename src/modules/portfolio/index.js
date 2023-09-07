@@ -24,10 +24,7 @@ const colloquialProjects = [
 const Portfolio = () => {
   return (
     <>
-    {/* Header for the Projects section */}
-    <div className="d-flex p-2">
-      <h1>My Projects</h1>
-    </div>
+
     {/* Main container for all projects */}
     <div className="project-containers-wrapper">
       {/* Header for the Solo Projects section */}
