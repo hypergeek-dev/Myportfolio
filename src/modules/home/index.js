@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Home = () => {
   // State to manage the source of the profile image
-  const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.png");
+  const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.webp");
   // Hover image URL
   const hoverImage = "https://www.binarymonk.online/profil_bw.png";
   // State to manage the text being typed
