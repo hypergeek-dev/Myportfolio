@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 
 // SkillCard Component for rendering individual skills
 const SkillCard = ({ skill }) => (
-  <div className="skill">
-    <img src={`./icons/${skill.icon}`} alt={skill.title} />
-    <p>{skill.title}</p>
+  <div className="d-flex flex-column align-items-center text-center mb-3">
+    <img src={`./icons/${skill.icon}`} alt={skill.title} className="mb-2" />
+    <p className="mb-0">{skill.title}</p>
   </div>
 );
 
@@ -36,56 +36,56 @@ const About = () => {
   ];
 
   return (
-    <section className="about_wrapper">
-      <Row className="Row">
-        <Col xs={12} md={6} className="Col">
-          <div className="about_card">
-            <h2>About Me</h2>
-            <p>
+    <section className="d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <Row>
+        <Col xs={12} md={6}>
+          <Card className="bg-dark text-white mb-4 p-3 shadow">
+            <Card.Title>About Me</Card.Title>
+            <Card.Text>
               Hi, there!<br />I am a highly motivated Software Developer with a postgraduate degree in Pedagogics. I am a nerd at heart, therefore I decided to transition into a software development career. I am seeking a challenging position where I can both use my pedagogical background for teamwork skills and understanding customer needs. I love being creative with concepts and thinking outside the box.
-            </p>
-          </div>
-          <div className="about_card">
-            <h2>Education</h2>
-            <p>
+            </Card.Text>
+          </Card>
+          <Card className="bg-dark text-white mb-4 p-3 shadow">
+            <Card.Title>Education</Card.Title>
+            <Card.Text>
               <strong>Code Institute, Dublin, Ireland (Remote)</strong><br />
               Dec 2022 - Present<br />
               Diploma in Fullstack Software Development
-            </p>
-            <p>
+            </Card.Text>
+            <Card.Text>
               <strong>Lexicon – Malmö</strong><br />
               July 2023 - Present<br />
               .NET Developer
-            </p>
-            <p>
+            </Card.Text>
+            <Card.Text>
               <strong>University of Campus Kolding, Denmark</strong><br />
               Sept 2012 - March 2016<br />
               Postgraduate in Pedagogics
-            </p>
-          </div>
+            </Card.Text>
+          </Card>
         </Col>
-        <Col xs={12} md={6} className="Col">
-          <div className="about_card">
-            <h2>Volunteer Work</h2>
-            <p>
+        <Col xs={12} md={6}>
+          <Card className="bg-dark text-white mb-4 p-3 shadow">
+            <Card.Title>Volunteer Work</Card.Title>
+            <Card.Text>
               <strong>Solidarity worker in Mozambique</strong><br />
               2003<br />
               Organizing and training volunteer teachers to educate families on topics such as hygiene, diseases, sanitation, and AIDS.
-            </p>
-            <p>
+            </Card.Text>
+            <Card.Text>
               <strong>Special needs teacher in Ghana</strong><br />
               2015<br />
               Inclusive Learning Support: Assist students with special needs in an inclusive classroom setting, adapting lessons and providing personalized help.
-            </p>
-          </div>
-          <div className="about_card">
-            <h2>Skills</h2>
-            <div className="skills_container">
+            </Card.Text>
+          </Card>
+          <Card className="bg-dark text-white mb-4 p-3 shadow">
+            <Card.Title>Skills</Card.Title>
+            <Card.Body className="d-flex flex-wrap justify-content-around">
               {skills.map((skill, index) => (
                 <SkillCard key={index} skill={skill} />
               ))}
-            </div>
-          </div>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </section>

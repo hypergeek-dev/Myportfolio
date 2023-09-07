@@ -34,30 +34,33 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
-      <h1 className="section-header">Contact</h1>
-      <div className="contact-wrapper">
+    <section id="contact" className="text-center"> {/* Added text-center for centering header */}
+      <h1 className="section-header display-4">Contact</h1> {/* Added Bootstrap class for larger text */}
+      <div className="contact-wrapper d-flex justify-content-center"> {/* Added Bootstrap flexbox classes */}
         {/* Form for collecting contact details */}
         <form ref={form} id="contact-form" className="form-horizontal" onSubmit={sendEmail}>
           <div className="form-group">
             <div className="col-sm-12">
               {/* Input field for name */}
-              <input type="text" className="form-control" id="name" name="name" placeholder="Name" required />
+              <input type="text" className="form-control bg-dark text-white border-secondary" id="name" name="name" placeholder="Name" required />
+              {/* Added Bootstrap classes for styling */}
             </div>
           </div>
 
           <div className="form-group">
             <div className="col-sm-12">
               {/* Input field for email */}
-              <input type="email" className="form-control" id="email" name="email" placeholder="E-mail" required />
+              <input type="email" className="form-control bg-dark text-white border-secondary" id="email" name="email" placeholder="E-mail" required />
+              {/* Added Bootstrap classes for styling */}
             </div>
           </div>
 
           {/* Textarea for message */}
-          <textarea className="form-control" rows="10" name="message" placeholder="Message" required />
+          <textarea className="form-control bg-dark text-white border-secondary" rows="10" name="message" placeholder="Message" required />
+          {/* Added Bootstrap classes for styling */}
 
           {/* Submit button */}
-          <button className="btn send-button" id="submit" type="submit">
+          <button className="btn btn-outline-light send-button" id="submit" type="submit"> {/* Added Bootstrap button classes */}
             <div className="button-wrapper">  
               <div className="alt-send-button">
                 <span className="send-text">Send</span>
@@ -70,4 +73,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact; 

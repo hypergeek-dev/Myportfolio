@@ -19,61 +19,62 @@ const colloquialProjects = [
   { imageUrl: 'https://binarymonk.online/screenshots/dara_planner.webp', description: 'This product also has a special side to it being the functionality is useful and on the conceptual side especially title and background. ', repository:'https://github.com/ibuttimer/in-for-a-penny', liveSite:'https://dara-planner.onrender.com/' },
 
 ];
-
-
 const Portfolio = () => {
   return (
     <>
-
-    {/* Main container for all projects */}
-    <div className="project-containers-wrapper">
-      {/* Header for the Solo Projects section */}
-      <div className="d-flex p-2 subcategori">
-        <h1>Solo projects</h1>
-      </div>
-      {/* Loop through soloProjects array and display each project */}
-      {soloProjects.map((project, index) => (
-        <div key={index} className="project-container">
-          {/* Project image */}
-          <div className="image-wrapper">
-            <img src={project.imageUrl} alt={`Solo Project ${index + 1}`} className="project-img" />
-          </div>
-          {/* Project description */}
-          <div className="project-description">
-            {project.description}
-          </div>
-          {/* Project footer with GitHub and live site links */}
-          <div className="project-footer">
-            <a href={project.repository} className="icon-link"><FontAwesomeIcon icon={faGithub} /></a>
-            <a href={project.liveSite} className="icon-link"><FontAwesomeIcon icon={faLink} /></a>
-          </div>
+      {/* Main container for all projects */}
+      <div className="container mt-5 justify-content-center align align-items-center full-height">
+        {/* Header for the Solo Projects section */}
+        <div className="text-center py-2">
+          <h1 className="display-4">Solo projects</h1>
         </div>
-      ))}
-      {/* Header for the Colloquial Projects section */}
-      <div className="d-flex p-2 subcategori">
-        <h1>Colloquial projects</h1>
-      </div>
-      {/* Loop through colloquialProjects array and display each project */}
-      {colloquialProjects.map((project, index) => (
-        <div key={index} className="project-container">
-          {/* Project image */}
-          <div className="image-wrapper">
-            <img src={project.imageUrl} alt={`Colloquial Project ${index + 1}`} className="project-img" />
-          </div>
-          {/* Project description */}
-          <div className="project-description">
-            {project.description}
-          </div>
-          {/* Project footer with GitHub and live site links */}
-          <div className="project-footer">
-            <a href={project.repository} className="icon-link"><FontAwesomeIcon icon={faGithub} /></a>
-            <a href={project.liveSite} className="icon-link"><FontAwesomeIcon icon={faLink} /></a>
-          </div>
+        <div className="row">
+          {/* Loop through soloProjects array and display each project */}
+          {soloProjects.map((project, index) => (
+            <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-4 mb-4 custom-col-xl">
+              <div className="card bg-dark text-white shadow rounded ">
+                {/* Project image */}
+                <img src={project.imageUrl} alt={`Solo Project ${index + 1}`} className="card-img-top" />
+                {/* Project description */}
+                <div className="card-body">
+                  <p className="card-text">{project.description}</p>
+                </div>
+                {/* Project footer with GitHub and live site links */}
+                <div className="card-footer d-flex justify-content-center">
+                  <a href={project.repository} className="text-muted mx-2"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
+                  <a href={project.liveSite} className="text-muted mx-2"><FontAwesomeIcon icon={faLink} size="2x" /></a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </>
-);
+        {/* Header for the Colloquial Projects section */}
+        <div className="text-center py-2">
+          <h1 className="display-4">Colloquial projects</h1>
+        </div>
+        <div className="row">
+          {/* Loop through colloquialProjects array and display each project */}
+          {colloquialProjects.map((project, index) => (
+            <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-4 mb-4 custom-col-xl">
+              <div className="card bg-dark text-white shadow rounded">
+                {/* Project image */}
+                <img src={project.imageUrl} alt={`Colloquial Project ${index + 1}`} className="card-img-top" />
+                {/* Project description */}
+                <div className="card-body">
+                  <p className="card-text">{project.description}</p>
+                </div>
+                {/* Project footer with GitHub and live site links */}
+                <div className="card-footer d-flex justify-content-center">
+                  <a href={project.repository} className="text-muted mx-2"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
+                  <a href={project.liveSite} className="text-muted mx-2"><FontAwesomeIcon icon={faLink} size="2x" /></a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Portfolio;

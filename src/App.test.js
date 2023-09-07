@@ -8,7 +8,7 @@ test('renders learn react link', async () => {
   // screen.debug();
 
   // Using a more flexible matcher
-  const linkElement = await screen.findByText((_, element) => element.textContent === "Dennis Jensen Contact projects About");
+  const linkElement = await screen.findByText((_, element) => element.textContent === "Portfolio");
   
   // Or using await for asynchronous elements
   // const linkElement = await screen.findByText(/learn react/i);
