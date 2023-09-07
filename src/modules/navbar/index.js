@@ -11,13 +11,13 @@ function NavigationBar() {
         {/* Navigation links using React Router's Link component */}
         <Nav>
           {/* Link to Home page */}
-          <Nav.Link className="glow-on-hover text-white" as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="/"><button type="button" class="glow-on-hover text-white btn btn-dark">Home</button></Nav.Link>
           {/* Link to About page */}
-          <Nav.Link className="glow-on-hover text-white" as={Link} to="/about">About</Nav.Link>
+          <Nav.Link as={Link} to="/about"><button type="button" class="glow-on-hover text-white btn btn-dark">About</button></Nav.Link>
           {/* Link to Portfolio page */}
-          <Nav.Link className="glow-on-hover text-white" as={Link} to="/portfolio">Portfolio</Nav.Link>
+          <Nav.Link as={Link} to="/portfolio"><button type="button" class="glow-on-hover text-white btn btn-dark">Portfolio</button></Nav.Link>
           {/* Link to Contact page */}
-          <Nav.Link className="glow-on-hover text-white" as={Link} to="/contact">Contact</Nav.Link>
+          <Nav.Link as={Link} to="/contact"><button type="button" class="glow-on-hover text-white btn btn-dark">Contact</button></Nav.Link>
         </Nav>
       </Navbar>
     </div>

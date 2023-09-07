@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6, span {
   border-radius: 50%;
   padding: 0.5rem;
   transition: all 0.3s ease;
+  color:#202020;
 }
 
 .social-icon:hover i {
@@ -100,7 +101,7 @@ h1, h2, h3, h4, h5, h6, span {
   
   
   .glow-on-hover {
-
+    position: relative;
     border: none;
     outline: none;
     color: #fff;
@@ -159,4 +160,6 @@ h1, h2, h3, h4, h5, h6, span {
 }
 /* Portfolio */
 
-
+.custom-top-padding {
+  padding-top:20vh;
+}

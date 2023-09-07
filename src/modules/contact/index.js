@@ -34,16 +34,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="text-center"> {/* Added text-center for centering header */}
-      <h1 className="section-header display-4">Contact</h1> {/* Added Bootstrap class for larger text */}
-      <div className="contact-wrapper d-flex justify-content-center"> {/* Added Bootstrap flexbox classes */}
+    <section id="contact" className="text-center custom-top-padding"> 
+      <h1 className="section-header display-4">Contact</h1> 
+      <div className="contact-wrapper d-flex justify-content-center"> 
         {/* Form for collecting contact details */}
         <form ref={form} id="contact-form" className="form-horizontal" onSubmit={sendEmail}>
           <div className="form-group">
             <div className="col-sm-12">
               {/* Input field for name */}
               <input type="text" className="form-control bg-dark text-white border-secondary" id="name" name="name" placeholder="Name" required />
-              {/* Added Bootstrap classes for styling */}
             </div>
           </div>
 
