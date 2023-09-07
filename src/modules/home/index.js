@@ -54,7 +54,7 @@ const Home = () => {
           src={imageSrc} 
           alt="My profile"
           onMouseEnter={() => setImageSrc(hoverImage)} 
-          onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.png")}/>
+          onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.webp")}/>
       </div>
       {/* Name and typed text */}
       <div className="animated_text">
