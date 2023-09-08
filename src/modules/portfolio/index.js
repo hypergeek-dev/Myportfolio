@@ -51,7 +51,7 @@ const colloquialProjects = [
         <div className="row justify-content-center">
           {colloquialProjects.map((project, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-3 m-2 p-2">
-              <div className="card bg-dark text-white shadow rounded">
+              <div className="card bg-dark text-white box_shadow rounded">
                 <img src={project.imageUrl} alt={`Colloquial Project ${index + 1}`} className="card-img-top" />
                 <div className="card-body">
                   <p className="card-text">{project.description}</p>
