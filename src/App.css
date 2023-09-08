@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6, span {
 .full-height
 {
   min-height:100vh;
+  min-width: 100vw;;
 }
 /* Custom styles for social icons */
 .social-icon i {
@@ -248,3 +249,8 @@ h1, h2, h3, h4, h5, h6, span {
     padding-top:35vh;
   }
 }
+@media (min-width: 1200px){
+.col-xl-4 {
+    flex: 0 0 auto;
+    width: 27.5%;
+}}

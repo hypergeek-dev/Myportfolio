@@ -23,12 +23,12 @@ const Portfolio = () => {
   return (
     <>
       {/* Main container for all projects */}
-      <div className="container justify-content-center align align-items-center full-height">
+      <div className="container full-height">
         {/* Header for the Solo Projects section */}
         <div className="text-center custom-top-padding">
           <h1 className="display-4 py-2 ">Solo projects</h1>
         </div>
-        <div className="row justify-content-center">
+        <div className="row">
           {/* Loop through soloProjects array and display each project */}
           {soloProjects.map((project, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-4 m-2 p-2">
