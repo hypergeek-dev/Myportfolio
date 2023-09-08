@@ -271,4 +271,11 @@ width:min-100vh;
   .custom-top-padding {
     padding-top:35vh;
   }
+  .animated_text h1 {
+    font-size: 150%;
+  }
+  .social-icon i {
+    font-size: 1.5rem;
+
+  }
 }
