@@ -50,7 +50,9 @@ span {
 .animated_text h1 {
   font-size: 250%;
 }
-
+.img_wrapper {
+  margin-top:-15vh;
+}
 /* Custom styles for image wrapper */
 .img_wrapper img {
   width: 20vw;
@@ -65,7 +67,7 @@ span {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-  border: 5px solid rgba(0, 0, 0, 0.419);
+  border: 3px solid rgba(0, 0, 0, 0.419);
   border-radius: 50%;
 }
 
@@ -121,8 +123,8 @@ span {
   animation: flicker 1s ease-in-out infinite alternate;
 }
 
-.opacity-70 {
-  background-color: rgba(52, 58, 64, 0.7);
+.opacity-80 {
+opacity:0.8;
 }
 
 /* gradient effect */
@@ -254,7 +256,14 @@ span {
   -webkit-box-shadow: 14px 5px 13px 0px rgba(0, 0, 0, 0.65);
   -moz-box-shadow: 14px 5px 13px 0px rgba(0, 0, 0, 0.65);
 }
-
+.gradient {
+  background: linear-gradient(
+    to right, 
+    #000000, 
+    #333333, 
+    #666666  
+  );
+}
 
 @media (min-width: 1200px) {
   .col-xl-4 {
@@ -313,11 +322,11 @@ span {
   }
 
   .animated_text h1 {
-    font-size: 150%;
+    font-size: 200%;
   }
 
   .social-icon i {
-    font-size: 1.5rem;
+    font-size: 1rem;
 
   }
 }

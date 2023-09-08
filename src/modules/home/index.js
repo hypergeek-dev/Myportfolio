@@ -63,7 +63,7 @@ const Home = () => {
               <a href="https://www.linkedin.com/in/dennis-mariegaard-jensen-a974a8287/" className="social-icon mx-2">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://github.com/hypergeek-dev/" className="social-icon mx-2">
+              <a href="https://github.com/hypergeek-dev/" className="social-icon mx-2 mb-2">
                 <i className="fab fa-github"></i>
               </a>
             </div>
@@ -74,7 +74,7 @@ const Home = () => {
    
         <div className="col-md-6 col-lg-4 row">
   <div className="container d-flex flex-column">
-    <h1 className="text-center">I'm a Full Stack Developer</h1>
+    <h1 className="text-center mb-4">I'm a Full Stack Developer</h1>
     <p className="text-center">Crafting solutions.</p>
     <p className="text-center">Form and function balance.</p>
     <p className="text-center">Elegant and neat.</p>
