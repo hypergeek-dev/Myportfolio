@@ -39,7 +39,7 @@ const About = () => {
     <section className="d-flex flex-column custom-top-padding align-items-center min-vh-100">
       <Row className="justify-content-center">
         <Col xs={10} md={4}>
-          <Card className="bg-dark text-white mb-2 p-3 shadow">
+          <Card className="bg-dark text-white mb-2 mt-5 p-3 shadow">
             <Card.Title>About Me</Card.Title>
             <Card.Text>
               Hi, there!<br />I am a highly motivated Software Developer with a postgraduate degree in Pedagogics. I am a nerd at heart, therefore I decided to transition into a software development career. I am seeking a challenging position where I can both use my pedagogical background for teamwork skills and understanding customer needs. I love being creative with concepts and thinking outside the box.
@@ -65,7 +65,7 @@ const About = () => {
           </Card>
         </Col>
         <Col xs={10} md={6}>
-          <Card className="bg-dark text-white mb-2 p-3 shadow">
+          <Card className="bg-dark text-white mb-2 mt-5 p-3 shadow">
             <Card.Title>Volunteer Work</Card.Title>
             <Card.Text>
               <strong>Solidarity worker in Mozambique</strong><br />

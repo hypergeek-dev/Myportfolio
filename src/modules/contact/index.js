@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="text-center custom-top-padding"> 
-      <h1 className="section-header display-4">Contact</h1> 
+      <h1 className="section-header display-4 mt-5">Contact</h1> 
       <div className="contact-wrapper d-flex justify-content-center"> 
         {/* Form for collecting contact details */}
         <form ref={form} id="contact-form" className="form-horizontal" onSubmit={sendEmail}>

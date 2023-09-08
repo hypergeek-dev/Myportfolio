@@ -48,7 +48,7 @@ const Home = () => {
         {/* Textbox Container */}
         <div className="col-md-6">
           <div className="flex-container d-flex flex-column">
-            <div className="img_wrapper d-flex flex-column justify-content-center align-self-center">
+            <div className="img_wrapper d-flex flex-column justify-content-center align-self-center custom-top-padding">
               <img
                 src={imageSrc} 
                 alt="My profile"
