@@ -28,14 +28,18 @@ const colloquialProjects = [
         <div className="row justify-content-center m-2">
           {soloProjects.map((project, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-3 m-2 p-2">
-              <div className="card bg-dark text-white shadow rounded">
+              <div className="card bg-dark text-white box_shadow rounded">
                 <img src={project.imageUrl} alt={`Solo Project ${index + 1}`} className="card-img-top" />
                 <div className="card-body">
                   <p className="card-text">{project.description}</p>
                 </div>
-                <div className="card-footer d-flex justify-content-center">
-                  <a href={project.repository} className="text-muted mx-2"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                  <a href={project.liveSite} className="text-muted mx-2"><FontAwesomeIcon icon={faLink} size="2x" /></a>
+                <div className="card-footer d-flex justify-content-evenly col row-2">
+                <button className="btn text-white btn btn-dark">
+                  <a href={project.repository} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
+                  Code</button>
+                  <button className="btn text-white btn btn-dark">
+                  <a href={project.liveSite} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faLink} size="2x" />Live Link</a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -52,9 +56,13 @@ const colloquialProjects = [
                 <div className="card-body">
                   <p className="card-text">{project.description}</p>
                 </div>
-                <div className="card-footer d-flex justify-content-center">
-                  <a href={project.repository} className="text-muted mx-2"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                  <a href={project.liveSite} className="text-muted mx-2"><FontAwesomeIcon icon={faLink} size="2x" /></a>
+                <div className="card-footer d-flex justify-content-evenly col row-2">
+                <button className="btn text-white btn btn-dark">
+                  <a href={project.repository} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
+                  Code</button>
+                  <button className="btn text-white btn btn-dark">
+                  <a href={project.liveSite} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faLink} size="2x" />Live Link</a>
+                  </button>
                 </div>
               </div>
             </div>

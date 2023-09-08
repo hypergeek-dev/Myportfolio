@@ -110,7 +110,10 @@ h1, h2, h3, h4, h5, h6, span {
     background-color: rgba(52, 58, 64,0.7);
   }
   /* gradient effect */
-  
+   
+.portfolio_icons {
+  color:white;
+}
   
   .glow-on-hover {
     position: relative;
@@ -122,7 +125,6 @@ h1, h2, h3, h4, h5, h6, span {
     border-radius: 10px;
    opacity:1;
 }
-
 
 .glow-on-hover:before {
     content: '';
@@ -219,9 +221,9 @@ h1, h2, h3, h4, h5, h6, span {
   border-radius: 15px;
   color: black;
 }
-
-@media (max-width: 673px) {
-
+.box_shadow {box-shadow: 14px 5px 13px 0px rgba(0,0,0,0.65);
+-webkit-box-shadow: 14px 5px 13px 0px rgba(0,0,0,0.65);
+-moz-box-shadow: 14px 5px 13px 0px rgba(0,0,0,0.65);
 }
 @media (min-width: 1200px){
 .col-xl-4 {
