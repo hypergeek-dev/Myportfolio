@@ -59,12 +59,12 @@ const Contact = () => {
           {/* Added Bootstrap classes for styling */}
 
           {/* Submit button */}
-          <button className="btn btn-outline-light send-button" id="submit" type="submit"> {/* Added Bootstrap button classes */}
+          <button className="btn send-button glow-on-hover text-white btn btn-dark" id="submit" type="submit"> {/* Added Bootstrap button classes */}
             <div className="button-wrapper">  
-              <div className="alt-send-button">
+  
                 <span className="send-text">Send</span>
               </div>
-            </div>
+  
           </button>
         </form>
       </div>

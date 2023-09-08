@@ -41,6 +41,8 @@ h1, h2, h3, h4, h5, h6, span {
 .img_wrapper img{
   width: 20vw;  
   height: 20vw; 
+  min-height:220px;
+  min-width:220px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
               0 6.7px 5.3px rgba(0, 0, 0, 0.048),
               0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -63,6 +65,11 @@ h1, h2, h3, h4, h5, h6, span {
   padding: 0.5rem;
   transition: all 0.3s ease;
   color:#202020;
+}
+
+.position-fixed {
+  z-index:999;
+  justify-content: center!important;
 }
 
 .social-icon:hover i {
@@ -219,7 +226,7 @@ h1, h2, h3, h4, h5, h6, span {
     justify-content: center;
   }
   .navbar-container {
-
+width:min-100vh;
     order: 2;}
 
     .col-xl-4 {
