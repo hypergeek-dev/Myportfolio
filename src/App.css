@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6, span {
 /* Portfolio */
 
 .custom-top-padding {
-  padding-top:20vh;
+  padding-top:14vh;
 }
 /* Contact */
 
@@ -217,8 +217,15 @@ h1, h2, h3, h4, h5, h6, span {
   }
   .navbar-container {
     order: 2;
+    font-size:smaller;
   }
-  .nav-link {
-  padding-right: 0px;
+
+  .name_wrapper {
+    display:flex;
+    width:100%;
+    justify-content: center;
+  }
 }
-}
+
+
+

@@ -36,10 +36,10 @@ const About = () => {
   ];
 
   return (
-    <section className="d-flex ms-2 flex-column custom-top-padding align-items-center min-vh-100">
-      <Row className="justify-content-center">
+    <section className="d-flex flex-column custom-top-padding align-items-center min-vh-100">
+      <Row className="justify-content-center custom-top-padding">
         <Col xs={12} md={4}>
-          <Card className="bg-dark text-white mb-2 shadow">
+          <Card className="bg-dark text-white mb-2 p-3 shadow">
             <Card.Title>About Me</Card.Title>
             <Card.Text>
               Hi, there!<br />I am a highly motivated Software Developer with a postgraduate degree in Pedagogics. I am a nerd at heart, therefore I decided to transition into a software development career. I am seeking a challenging position where I can both use my pedagogical background for teamwork skills and understanding customer needs. I love being creative with concepts and thinking outside the box.
