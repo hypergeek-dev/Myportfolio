@@ -163,3 +163,62 @@ h1, h2, h3, h4, h5, h6, span {
 .custom-top-padding {
   padding-top:20vh;
 }
+/* Contact */
+
+.form-control {
+  width: 20vw;
+  min-width: 280px;
+  background-color: transparent;
+  border: 5px solid rgb(70, 70, 70);
+  margin-bottom: 1rem;
+  box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+  -webkit-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+  -moz-box-shadow: -5px -6px 33px -2px rgba(0,0,0,0.31) inset;
+  color: #fff;
+}
+
+#contact .form-control::placeholder {
+  color:silver ;
+  opacity: 1;
+}
+.form-control:focus {
+  border-color: silver;
+  box-shadow: none;
+  background-color: transparent;
+  color: silver;
+}
+
+.form-control .btn {
+  background-color: transparent;
+  border: 5px solid rgb(70, 70, 70);
+  border-radius: 15px;
+  color: silver;
+}
+
+.form-control .btn:hover {
+  background-color: transparent;
+  border: 5px solid silver;
+  border-radius: 15px;
+}
+
+.form-control .btn:active {
+  background-color: silver;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  color: black;
+}
+
+@media (max-width: 673px) {
+  .container-fluid {
+    flex-direction: column;
+  }
+  .name-container {
+    order: 1;
+  }
+  .navbar-container {
+    order: 2;
+  }
+  .nav-link {
+  padding-right: 0px;
+}
+}
