@@ -75,9 +75,9 @@ const Home = () => {
         <div className="col-md-6 col-lg-4 row">
   <div className="container d-flex flex-column">
     <h1 className="text-center mb-4">I'm a Full Stack Developer</h1>
-    <p className="text-center">Crafting solutions.</p>
-    <p className="text-center">Form and function balance.</p>
-    <p className="text-center">Elegant and neat.</p>
+    <p className="text-center font-weight-bold">Crafting solutions.</p>
+    <p className="text-center font-weight-bold">Form and function balance.</p>
+    <p className="text-center font-weight-bold">Elegant and neat.</p>
   </div>
 </div>
 
