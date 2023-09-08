@@ -1,17 +1,57 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
 import App from './App';
 
-test('renders learn react link', async () => {
-  render(<App />);
-  
-  // For debugging
-  // screen.debug();
+// Mocking the NavigationBar component
+jest.mock('./modules/navbar/', () => {
+  return function DummyNavigationBar() {
+    return <div data-testid="navbar">NavigationBar</div>;
+  };
+});
 
-  // Using a more flexible matcher
-  const linkElement = await screen.findByText((_, element) => element.textContent === "Portfolio");
-  
-  // Or using await for asynchronous elements
-  // const linkElement = await screen.findByText(/learn react/i);
-  
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  it('renders the home page by default', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    expect(screen.getByText('Home Component Content')).toBeInTheDocument();
+  });
+
+  it('navigates to About page', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    fireEvent.click(screen.getByText(/about/i));
+    expect(screen.getByText('About Component Content')).toBeInTheDocument();
+  });
+
+  it('navigates to Portfolio page', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    fireEvent.click(screen.getByText(/portfolio/i));
+    expect(screen.getByText('Portfolio Component Content')).toBeInTheDocument();
+  });
+
+  it('navigates to Contact page', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    fireEvent.click(screen.getByText(/contact/i));
+    expect(screen.getByText('Contact Component Content')).toBeInTheDocument();
+  });
 });
