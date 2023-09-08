@@ -1,33 +1,57 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
-import NavigationBar from './modules/navbar/';
-import Home from './modules/home/';
-import About from './modules/about/';
-import Portfolio from './modules/portfolio/';
-import Contact from './modules/contact/';
-import './App.css'; 
+import { render, screen, fireEvent } from '@testing-library/react';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
+import App from './';
 
-function App() {
-  return (
-    <Router>
-      <div className="app-container"> 
-        <NavigationBar />
-        <div className="content"> 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+// Mocking the NavigationBar component
+jest.mock('./modules/navbar/', () => {
+  return function DummyNavigationBar() {
+    return <div data-testid="navbar">NavigationBar</div>;
+  };
+});
 
+describe('App', () => {
+  it('renders the home page by default', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    expect(screen.getByText('Home Component Content')).toBeInTheDocument();
+  });
 
-      </div>
-    </Router>
-  );
-}
+  it('navigates to About page', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    fireEvent.click(screen.getByText(/about/i));
+    expect(screen.getByText('About Component Content')).toBeInTheDocument();
+  });
 
-export default App;
+  it('navigates to Portfolio page', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    fireEvent.click(screen.getByText(/portfolio/i));
+    expect(screen.getByText('Portfolio Component Content')).toBeInTheDocument();
+  });
+
+  it('navigates to Contact page', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <App />
+      </Router>
+    );
+    fireEvent.click(screen.getByText(/contact/i));
+    expect(screen.getByText('Contact Component Content')).toBeInTheDocument();
+  });
+});
