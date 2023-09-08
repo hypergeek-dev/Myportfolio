@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6, span {
   }
  
   .opacity-70 {
-    opacity: 0.7;
+    background-color: rgba(52, 58, 64,0.7);
   }
   /* gradient effect */
   
@@ -106,9 +106,9 @@ h1, h2, h3, h4, h5, h6, span {
     outline: none;
     color: #fff;
     cursor: pointer;
-
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
-   
+   opacity:1;
 }
 
 
