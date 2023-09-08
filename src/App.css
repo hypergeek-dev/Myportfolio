@@ -212,18 +212,36 @@ h1, h2, h3, h4, h5, h6, span {
   .container-fluid {
     flex-direction: column;
   }
-  .name-container {
+  .name_wrapper {
     order: 1;
+    justify-content: center;
   }
   .navbar-container {
-    order: 2;
-    font-size:smaller;
-  }
+
+    order: 2;}
+
+.nav-link{
+  justify-content: center!important;
+}
+    
+  
+.nav-link .btn{
+  padding:3px;
+  font-size:smaller;
+}
+
+.nav-link {
+  margin:0;
+  justify-content: center;
+}
 
   .name_wrapper {
     display:flex;
     width:100%;
-    justify-content: center;
+
+  }
+  .custom-top-padding {
+    padding-top:35vh;
   }
 }
 

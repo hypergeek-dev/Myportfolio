@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <section className="d-flex flex-column custom-top-padding align-items-center min-vh-100">
-      <Row className="justify-content-center custom-top-padding">
+      <Row className="justify-content-center">
         <Col xs={12} md={4}>
           <Card className="bg-dark text-white mb-2 p-3 shadow">
             <Card.Title>About Me</Card.Title>
