@@ -106,8 +106,8 @@ span {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  -webkit-text-stroke: #fff;
-  -moz-text-stroke: #fff;
+  -webkit-text-stroke: greenyellow;
+  -moz-text-stroke:greenyellow;
   -webkit-text-stroke-width: 1px;
   -moz-text-stroke-width: 1px;
   -webkit-transition: all 0.5s ease-in-out;
@@ -331,4 +331,27 @@ opacity:0.8;
     font-size: 1rem;
 
   }
+}
+.col-lg-4{
+  font-weight: 600;
+  font-size:larger;
+}
+.col-lg-4 h1{
+  font-weight: 900;
+  font-size:200%;
+  text-shadow: 4px 4px black;
+
+}
+
+.col-lg-4 p{
+  text-rendering: optimizeLegibility;
+    color: silver;
+font-size:125%;
+    letter-spacing: .1em;
+    text-shadow: 
+      -1px -1px 1px #111, 
+      2px 2px 1px #363636;
+  }
+.col-lg-4 span{
+color:#48ff00;
 }
