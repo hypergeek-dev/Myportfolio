@@ -71,15 +71,17 @@ const Home = () => {
         </div>
 
         {/* Content Container */}
-        <div className="col-md-6">
-          <div className="content-container">
-            <h1>Hi, I'm Dennis, a Full Stack Developer where creativity meets clean code.</h1>
-            <p>I love crafting innovative solutions from front to back, using a diverse tech stack.</p>
-            <p>My code is not just functional; it's an art form.</p>
-            <p>Efficient, maintainable, and elegant.</p>
-            <p>Let's turn your next big idea into reality.</p>
-          </div>
-        </div>
+   
+        <div className="col-md-6 col-lg-4 row">
+  <div className="container d-flex flex-column">
+    <h1 className="text-center">I'm a Full Stack Developer</h1>
+    <p className="text-center">Crafting solutions.</p>
+    <p className="text-center">Form and function balance.</p>
+    <p className="text-center">Elegant and neat.</p>
+  </div>
+</div>
+
+
 
       </div>
     </div>
