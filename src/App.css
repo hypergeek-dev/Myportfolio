@@ -25,6 +25,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, span {
@@ -161,7 +162,7 @@ h1, h2, h3, h4, h5, h6, span {
 /* Portfolio */
 
 .custom-top-padding {
-  padding-top:14vh;
+  padding-top:16vh;
 }
 /* Contact */
 
@@ -220,6 +221,9 @@ h1, h2, h3, h4, h5, h6, span {
 
     order: 2;}
 
+    .col-xl-4 {
+        width: 20%;
+    }
 .nav-link{
   justify-content: center!important;
 }
@@ -244,6 +248,3 @@ h1, h2, h3, h4, h5, h6, span {
     padding-top:35vh;
   }
 }
-
-
-
