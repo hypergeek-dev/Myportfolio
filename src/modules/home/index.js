@@ -78,6 +78,9 @@ const Home = () => {
     <p className="text-center">Crafting solutions.</p>
     <p className="text-center">Form and function balance.</p>
     <p className="text-center">Elegant and neat.</p>
+<div className="d-flex justify-content-center">
+    <button type="button" class="btn btn-dark col-3">Download my resume</button>
+    </div>
   </div>
 </div>
 
