@@ -52,10 +52,10 @@ const Portfolio = () => {
         <div className="text-center py-2">
           <h1 className="display-4">Colloquial projects</h1>
         </div>
-        <div className="row">
+        <div className="row justify-content-center">
           {/* Loop through colloquialProjects array and display each project */}
           {colloquialProjects.map((project, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-4 mb-4 custom-col-xl">
+            <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-4 m-2 p-2">
               <div className="card bg-dark text-white shadow rounded">
                 {/* Project image */}
                 <img src={project.imageUrl} alt={`Colloquial Project ${index + 1}`} className="card-img-top" />
