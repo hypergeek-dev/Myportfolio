@@ -28,10 +28,10 @@ const Portfolio = () => {
         <div className="text-center custom-top-padding">
           <h1 className="display-4 py-2 ">Solo projects</h1>
         </div>
-        <div className="row">
+        <div className="row justify-content-center">
           {/* Loop through soloProjects array and display each project */}
           {soloProjects.map((project, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-4 m-2 p-2">
+            <div key={index} className="col-12 col-sd-1 col-md-4 col-lg-4 col-xl-4 m-2 p-2">
               <div className="card bg-dark text-white shadow rounded ">
                 {/* Project image */}
                 <img src={project.imageUrl} alt={`Solo Project ${index + 1}`} className="card-img-top" />
