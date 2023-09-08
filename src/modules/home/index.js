@@ -42,12 +42,12 @@ const Home = () => {
   }, [currentLine]);
 
   return (
-    <div className="container-fluid full-height">
+    <div className="container-fluid">
       <div className="row justify-content-center align-items-center full-height">
         
         {/* Textbox Container */}
         <div className="col-md-6">
-          <div className="flex-container d-flex flex-column justify-content-center align-items-center">
+          <div className="flex-container d-flex flex-column">
             <div className="img_wrapper d-flex flex-column justify-content-center align-self-center">
               <img
                 src={imageSrc} 
