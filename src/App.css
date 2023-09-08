@@ -15,7 +15,10 @@
   font-family: 'Roboto Slab';
   src: url('./RobotoSlab-VariableFont_wght.ttf') format('truetype');
 }
-
+.name_wrapper
+{
+  width:100vw;
+}
 /* Global Styles */
 body {
   font-family: var(--main-font);
@@ -64,7 +67,7 @@ h1, h2, h3, h4, h5, h6, span {
   border-radius: 50%;
   padding: 0.5rem;
   transition: all 0.3s ease;
-  color:#202020;
+ color: silver;
 }
 
 .position-fixed {
@@ -73,7 +76,7 @@ h1, h2, h3, h4, h5, h6, span {
 }
 
 .social-icon:hover i {
-  color: silver;
+ 
   background-color: #000;
 }
   
@@ -218,6 +221,19 @@ h1, h2, h3, h4, h5, h6, span {
 }
 
 @media (max-width: 673px) {
+
+}
+@media (min-width: 1200px){
+.col-xl-4 {
+    flex: 0 0 auto;
+    width: 27.5%;
+}}
+
+@media (max-width: 768px) {
+  .custom-navbar .navbar-nav {
+    justify-content: center;
+    width: 100%;
+  }
   .container-fluid {
     flex-direction: column;
   }
@@ -256,8 +272,3 @@ width:min-100vh;
     padding-top:35vh;
   }
 }
-@media (min-width: 1200px){
-.col-xl-4 {
-    flex: 0 0 auto;
-    width: 27.5%;
-}}

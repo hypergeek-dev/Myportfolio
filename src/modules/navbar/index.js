@@ -10,7 +10,7 @@ function NavigationBar() {
       </div>
       {/* Bootstrap Navbar */}
       <div className="navbar-container d-flex flex-column justify-content-end">
-      <Navbar variant="dark">
+      <Navbar variant="dark" className="custom-navbar">
     
         {/* Navigation links using React Router's Link component */}
         <Nav>
