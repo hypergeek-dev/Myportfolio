@@ -35,8 +35,8 @@ const colloquialProjects = [
                 </div>
                 <div className="card-footer d-flex justify-content-evenly col row-2">
                 <button className="btn text-white btn btn-dark">
-                  <a href={project.repository} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                  Code</button>
+                  <a href={project.repository} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faGithub} size="2x" />Code</a>
+                  </button>
                   <button className="btn text-white btn btn-dark">
                   <a href={project.liveSite} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faLink} size="2x" />Live Link</a>
                   </button>
@@ -58,8 +58,8 @@ const colloquialProjects = [
                 </div>
                 <div className="card-footer d-flex justify-content-evenly col row-2">
                 <button className="btn text-white btn btn-dark">
-                  <a href={project.repository} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faGithub} size="2x" /></a>
-                  Code</button>
+                  <a href={project.repository} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faGithub} size="2x" />Code</a>
+                  </button>
                   <button className="btn text-white btn btn-dark">
                   <a href={project.liveSite} className="mx-2 portfolio_icons row justify-content-center"><FontAwesomeIcon icon={faLink} size="2x" />Live Link</a>
                   </button>

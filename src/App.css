@@ -15,6 +15,10 @@
   font-family: 'Roboto Slab';
   src: url('./RobotoSlab-VariableFont_wght.ttf') format('truetype');
 }
+
+a {
+  text-decoration: none;
+}
 .name_wrapper
 {
   width:100vw;
