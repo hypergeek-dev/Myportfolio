@@ -41,7 +41,7 @@ const Home = () => {
   }, [currentLine]);
   return (
     <div className="flex-container d-flex flex-column justify-content-center align-items-center full-height">
-      <div className="img_wrapper d-flex flex-column justify-content-center align-self-center">
+      <div className="img_wrapper d-flex flex-column justify-content-center align-self-center custom-top-padding">
         <img
           src={imageSrc} 
           alt="My profile"
