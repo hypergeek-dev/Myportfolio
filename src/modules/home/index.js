@@ -10,8 +10,8 @@ const Home = () => {
   useEffect(() => {
     const lines = [
       'I\'m a coder!',  
-      'JavaScript Ninja',
-      'CSS Wizard',
+      'JavaScript Wizard',
+      'CSS passionate',
       'Lifelong Learner'
     ];
 
