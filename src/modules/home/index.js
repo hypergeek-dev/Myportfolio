@@ -78,8 +78,8 @@ const Home = () => {
     <p className="text-center">Crafting solutions.</p>
     <p className="text-center">Form and function balance.</p>
     <p className="text-center">Elegant and neat.</p>
-<div className="d-flex justify-content-center">
-    <button type="button" class="btn btn-dark col-3">Download my resume</button>
+<div className="d-flex justify-content-center align-items-center">
+<button type="button" class="btn btn-dark glow-on-hover download_btn"><a href="https://binarymonk.online/CV.pdf" download>Download my resume</a></button>
     </div>
   </div>
 </div>

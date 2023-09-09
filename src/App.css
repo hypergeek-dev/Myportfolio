@@ -122,6 +122,38 @@ span {
   -ms-animation: flicker 1s ease-in-out infinite alternate;
   animation: flicker 1s ease-in-out infinite alternate;
 }
+.col-lg-4{
+  font-weight: 600;
+  font-size:larger;
+}
+.col-lg-4 h1{
+  font-weight: 900;
+  font-size:200%;
+  text-shadow: 4px 4px black;
+
+}
+
+.col-lg-4 p{
+  text-rendering: optimizeLegibility;
+    color: silver;
+font-size:125%;
+    letter-spacing: .1em;
+    text-shadow: 
+      -1px -1px 1px #111, 
+      2px 2px 1px #363636;
+  }
+.col-lg-4 span{
+color:#48ff00;
+}
+
+.download_btn
+{
+  width:136px;
+}
+
+.download_btn a  {
+ color:yellowgreen;
+}
 
 .opacity-80 {
 opacity:0.8;
@@ -250,7 +282,14 @@ opacity:0.8;
   border-radius: 15px;
   color: black;
 }
-
+.contact-info-container {
+  backdrop-filter: blur(8px) saturate(124%);
+  -webkit-backdrop-filter: blur(8px) saturate(124%);
+  background-color: rgba(17, 25, 40, 0.35);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 20px;
+}
 .box_shadow {
   box-shadow: 14px 5px 13px 0px rgba(0, 0, 0, 0.65);
   -webkit-box-shadow: 14px 5px 13px 0px rgba(0, 0, 0, 0.65);
@@ -331,27 +370,13 @@ opacity:0.8;
     font-size: 1rem;
 
   }
-}
-.col-lg-4{
-  font-weight: 600;
-  font-size:larger;
-}
-.col-lg-4 h1{
-  font-weight: 900;
-  font-size:200%;
-  text-shadow: 4px 4px black;
-
-}
-
-.col-lg-4 p{
-  text-rendering: optimizeLegibility;
-    color: silver;
-font-size:125%;
-    letter-spacing: .1em;
-    text-shadow: 
-      -1px -1px 1px #111, 
-      2px 2px 1px #363636;
+  .col-lg-4 h1{
+    font-size:110%;
   }
-.col-lg-4 span{
-color:#48ff00;
+  .col-lg-4 p{
+  font-size:1rem;
+}
+.contact-info-container p {
+  font-size:smaller;
+}
 }
