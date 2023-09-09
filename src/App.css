@@ -162,6 +162,10 @@ a {
 .opacity-80 {
   opacity: 0.8;
 }
+/* About */
+.skills img {
+  width:75px;
+}
 
 /* Portfolio Icons */
 .portfolio_icons {
@@ -188,10 +192,12 @@ a {
   left: -2px;
   background-size: 400%;
   z-index: -1;
-  filter: blur(5px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
+  -webkit-animation: glowing 20s linear infinite;
+          animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity .3s ease-in-out;
   border-radius: 10px;
@@ -236,6 +242,7 @@ a {
   }
 }
 
+
 /* Custom Top Padding */
 .custom-top-padding {
   padding-top: 10vh;
@@ -251,6 +258,26 @@ a {
   opacity: 0.8;
   box-shadow: -5px -6px 33px -2px rgba(0, 0, 0, 0.31) inset;
   color: #fff;
+}
+
+#contact .form-control::-webkit-input-placeholder {
+  color: var(--silver-color);
+  opacity: 1;
+}
+
+#contact .form-control::-moz-placeholder {
+  color: var(--silver-color);
+  opacity: 1;
+}
+
+#contact .form-control:-ms-input-placeholder {
+  color: var(--silver-color);
+  opacity: 1;
+}
+
+#contact .form-control::-ms-input-placeholder {
+  color: var(--silver-color);
+  opacity: 1;
 }
 
 #contact .form-control::placeholder {
@@ -286,7 +313,8 @@ a {
 }
 
 .contact-info-container {
-  backdrop-filter: blur(8px) saturate(124%);
+  -webkit-backdrop-filter: blur(8px) saturate(124%);
+          backdrop-filter: blur(8px) saturate(124%);
   background-color: rgba(17, 25, 40, 0.35);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);

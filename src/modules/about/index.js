@@ -4,7 +4,7 @@ import { Row, Col, Card } from 'react-bootstrap';
 
 // SkillCard Component for rendering individual skills
 const SkillCard = ({ skill }) => (
-  <div className="d-flex flex-column align-items-center text-center mb-3">
+  <div className="d-flex flex-column align-items-center text-center">
     <img src={`./icons/${skill.icon}`} alt={skill.title} className="mb-2" />
     <p className="mb-0">{skill.title}</p>
   </div>
@@ -64,23 +64,11 @@ const About = () => {
             </Card.Text>
           </Card>
         </Col>
-        <Col xs={10} md={6}>
-          <Card className="bg-dark text-white mb-2 mt-5 p-3 shadow">
-            <Card.Title>Volunteer Work</Card.Title>
-            <Card.Text>
-              <strong>Solidarity worker in Mozambique</strong><br />
-              2003<br />
-              Organizing and training volunteer teachers to educate families on topics such as hygiene, diseases, sanitation, and AIDS.
-            </Card.Text>
-            <Card.Text>
-              <strong>Special needs teacher in Ghana</strong><br />
-              2015<br />
-              Inclusive Learning Support: Assist students with special needs in an inclusive classroom setting, adapting lessons and providing personalized help.
-            </Card.Text>
-          </Card>
-          <Card className="bg-dark text-white mb-4 p-3 shadow">
+        <Col xs={10} md={5}>
+     
+          <Card className="bg-dark text-white mt-5 p-3 shadow">
             <Card.Title>Skills</Card.Title>
-            <Card.Body className="d-flex flex-wrap justify-content-around">
+            <Card.Body className="d-flex flex-wrap justify-content-evenly skills">
               {skills.map((skill, index) => (
                 <SkillCard key={index} skill={skill} />
               ))}
