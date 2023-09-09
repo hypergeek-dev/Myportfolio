@@ -39,13 +39,13 @@ const About = () => {
     <section className="d-flex flex-column custom-top-padding align-items-center min-vh-100">
       <Row className="justify-content-center">
         <Col xs={10} md={4}>
-          <Card className="bg-dark text-white mb-2 mt-5 p-3 shadow">
+          <Card className="bg-dark text-white mb-4 mt-5 p-3 box_shadow">
             <Card.Title>About Me</Card.Title>
             <Card.Text>
               Hi, there!<br />I am a highly motivated Software Developer with a postgraduate degree in Pedagogics. I am a nerd at heart, therefore I decided to transition into a software development career. I am seeking a challenging position where I can both use my pedagogical background for teamwork skills and understanding customer needs. I love being creative with concepts and thinking outside the box.
             </Card.Text>
           </Card>
-          <Card className="bg-dark text-white mb-2 p-3 shadow">
+          <Card className="bg-dark text-white mb-4 p-3 box_shadow">
             <Card.Title>Education</Card.Title>
             <Card.Text>
               <strong>Code Institute, Dublin, Ireland (Remote)</strong><br />
@@ -66,7 +66,7 @@ const About = () => {
         </Col>
         <Col xs={10} md={5}>
      
-          <Card className="bg-dark text-white mt-5 p-3 shadow">
+          <Card className="bg-dark text-white mt-5 p-3 box_shadow">
             <Card.Title>Skills</Card.Title>
             <Card.Body className="d-flex flex-wrap justify-content-evenly skills">
               {skills.map((skill, index) => (
