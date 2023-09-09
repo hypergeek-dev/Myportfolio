@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 function NavigationBar() {
   return (
-    <div className="container-fluid d-flex justify-content-between opacity-80 position-fixed gradient">
+    <div className="container-fluid d-flex justify-content-between opacity-80 position-fixed gradient above_all">
       <div className="name_wrapper">
       <h1 className="text-white"><span className="letter_large">D</span>ennis Jensen</h1>
       </div>

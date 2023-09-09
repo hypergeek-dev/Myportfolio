@@ -8,14 +8,14 @@ import Home from './modules/home/';
 import About from './modules/about/';
 import Portfolio from './modules/portfolio/';
 import Contact from './modules/contact/';
-import './App.css'; 
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="app-container"> 
+      <div className="app-container">
         <NavigationBar />
-        <div className="content"> 
+        <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
