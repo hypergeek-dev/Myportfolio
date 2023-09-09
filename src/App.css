@@ -1,24 +1,11 @@
-/* General Variables */
-:root {
-  --main-font: 'Montserrat', sans-serif;
-  --secondary-font: 'Roboto Slab', sans-serif;
-  --main-color: #fff;
-  --silver-color: silver;
-  --black-color: #000;
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Font Face */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('./Montserrat-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Roboto Slab';
-  src: url('./RobotoSlab-VariableFont_wght.ttf') format('truetype');
-}
-
-/* Global Styles */
+/* Normalize.css */
 body,
 h1,
 h2,
@@ -45,6 +32,26 @@ p {
   text-shadow: 2px 2px black;
 }
 
+/* General Variables */
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Roboto Slab', sans-serif;
+  --main-color: #fff;
+  --silver-color: silver;
+  --black-color: #000;
+}
+
+/* Font Face */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('./RobotoSlab-VariableFont_wght.ttf') format('truetype');
+}
+
 /* Utility Classes */
 .text-center {
   text-align: center;
@@ -67,7 +74,7 @@ a {
 
 /* Image Wrapper */
 .img_wrapper {
-  margin-top: -15vh;
+  margin: -15vh 0 0 0;
 }
 
 .img_wrapper img {
@@ -96,11 +103,11 @@ a {
 /* Social Icon */
 .social-icon i {
   font-size: 2.5rem;
-  border: 2px solid silver;
+  border: 2px solid var(--silver-color);
   border-radius: 50%;
   padding: 0.5rem;
   transition: all 0.3s ease;
-  color: silver;
+  color: var(--silver-color);
 }
 
 .social-icon:hover i {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 const Home = () => {
   const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.webp");
   const hoverImage = "https://www.binarymonk.online/profil_bw.png";
@@ -73,22 +72,22 @@ const Home = () => {
         {/* Content Container */}
    
         <div className="col-md-6 col-lg-4 row">
-  <div className="container d-flex flex-column">
-    <h1 class="text-center mb-4 h1">I'm a Full Stack <span>Dev</span>eloper</h1>
-    <p className="text-center">Crafting solutions.</p>
-    <p className="text-center">Balance form and function.</p>
-    <p className="text-center">Elegant and neat.</p>
-<div className="d-flex justify-content-center align-items-center">
-<button type="button" class="btn btn-dark glow-on-hover download_btn"><a href="https://binarymonk.online/CV.pdf" download>Download my resume</a></button>
-    </div>
-  </div>
-</div>
-
-
+          <div className="container d-flex flex-column">
+            <h1 class="text-center mb-4 h1">I'm a Full Stack <span>Dev</span>eloper</h1>
+            <p className="text-center">Crafting solutions.</p>
+            <p className="text-center">Balance form and function.</p>
+            <p className="text-center">Elegant and neat.</p>
+            <div className="d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-dark glow-on-hover download_btn"><a href="https://binarymonk.online/CV.pdf" download>Download my resume</a></button>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   );
 };
+
+  
 
 export default Home;
