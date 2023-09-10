@@ -75,7 +75,7 @@ const Home = () => {
           <div className="container d-flex flex-column">
             <h1 class="text-center mb-4 h1">I'm a Full Stack <span>Dev</span>eloper</h1>
             <p className="text-center">Crafting solutions.</p>
-            <p className="text-center">Balance form and function.</p>
+            <p className="text-center">Form and function balance.</p>
             <p className="text-center">Elegant and neat.</p>
             <div className="d-flex justify-content-center align-items-center">
               <button type="button" class="btn btn-dark glow-on-hover download_btn"><a href="https://binarymonk.online/CV.pdf" download>Download my resume</a></button>
