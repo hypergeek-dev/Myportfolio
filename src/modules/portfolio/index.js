@@ -23,7 +23,7 @@ const colloquialProjects = [
     <>
       <div className="container full-height">
         <div className="text-center custom-top-padding">
-          <h1 className="display-4 py-2 mt-5">Solo projects</h1>
+          <h1 className="display-4 py-2 mt-5 custom_headlines">Solo projects</h1>
         </div>
         <div className="row justify-content-center m-2">
           {soloProjects.map((project, index) => (
@@ -46,7 +46,7 @@ const colloquialProjects = [
           ))}
         </div>
         <div className="text-center py-2 mt-4">
-          <h1 className="display-4">Colloquial projects</h1>
+          <h1 className="display-4 custom_headlines">Colloquial projects</h1>
         </div>
         <div className="row justify-content-center">
           {colloquialProjects.map((project, index) => (

@@ -28,7 +28,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="text-center custom-top-padding">
-      <h1 className="section-header display-4 mt-5">Contact</h1>
+      <h1 className="section-header display-4 mt-5 custom_headlines">Contact</h1>
       <div className="container">
         <div className="row justify-content-center">
           {/* Form Container */}

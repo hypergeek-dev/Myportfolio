@@ -139,6 +139,7 @@ a {
 }
 
 .col-lg-4 h1 {
+  text-rendering: optimizeLegibility;
   font-weight: 900;
   font-size: 200%;
   text-shadow: 4px 4px black;
@@ -149,7 +150,7 @@ a {
   color: silver;
   font-size: 125%;
   letter-spacing: .1em;
-  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+  text-shadow: -1px -2px 3px #111, 3px 3px 3px #1c1b1b;
 }
 
 .col-lg-4 span {
@@ -178,7 +179,11 @@ a {
 .portfolio_icons {
   color: white;
 }
-
+.custom_headlines
+{
+  letter-spacing: 3px;
+  font-weight: 600;
+}
 /* Glow on Hover */
 .glow-on-hover {
   position: relative;
