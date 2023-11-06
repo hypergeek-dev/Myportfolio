@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const Home = () => {
-  const [imageSrc, setImageSrc] = useState("https://www.binarymonk.online/profil.webp");
-  const hoverImage = "https://www.binarymonk.online/profil_bw.png";
+  const [imageSrc, setImageSrc] = useState("https://raw.githubusercontent.com/hypergeek-dev/Myportfolio/main/src/assets/graphic/profil.webp");
+  const hoverImage = "https://raw.githubusercontent.com/hypergeek-dev/Myportfolio/main/src/assets/graphic/profil.webp";
   const [typedText, setTypedText] = useState('');
   const [currentLine, setCurrentLine] = useState(0);
 
@@ -52,7 +52,7 @@ const Home = () => {
                 src={imageSrc} 
                 alt="My profile"
                 onMouseEnter={() => setImageSrc(hoverImage)} 
-                onMouseLeave={() => setImageSrc("https://www.binarymonk.online/profil.webp")}
+                onMouseLeave={() => setImageSrc("https://raw.githubusercontent.com/hypergeek-dev/Myportfolio/main/src/assets/graphic/profil.webp")}
               />
             </div>
             <div className="animated_text d-flex flex-column justify-content-center align-items-center text-center">
@@ -73,12 +73,14 @@ const Home = () => {
    
         <div className="col-md-6 col-lg-4 row">
           <div className="container d-flex flex-column">
-            <h1 class="text-center mb-4 h1">I'm a Full Stack <span>Dev</span>eloper</h1>
+            <h1 className="text-center mb-4 h1">I'm a Full Stack <span>Dev</span>eloper</h1>
             <p className="text-center">Crafting solutions.</p>
             <p className="text-center">Form and function balance.</p>
             <p className="text-center">Elegant and neat.</p>
             <div className="d-flex justify-content-center align-items-center">
-              <button type="button" class="btn btn-dark glow-on-hover download_btn"><a href="https://binarymonk.online/CV.pdf" download>Download my resume</a></button>
+              <button type="button" className="btn btn-dark glow-on-hover download_btn">
+                <a href="https://binarymonk.online/CV.pdf" download>Download my resume</a>
+              </button>
             </div>
           </div>
         </div>
@@ -87,7 +89,5 @@ const Home = () => {
     </div>
   );
 };
-
-  
 
 export default Home;
