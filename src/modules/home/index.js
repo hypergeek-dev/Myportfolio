@@ -75,7 +75,7 @@ const Home = () => {
             <p className="text-center">Elegant and neat.</p>
             <div className="d-flex justify-content-center align-items-center">
               <button type="button" className="btn btn-dark glow-on-hover download_btn">
-                <a href="https://www.dmjnow.se/CV.pdf" download>Download my resume</a>
+                <a href="https://drive.google.com/file/d/16sElTgOQ_mc4aF6YMpWI4egtEQKULzkz/view" download>Download my resume</a>
               </button>
             </div>
           </div>
