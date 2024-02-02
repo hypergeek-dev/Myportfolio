@@ -75,7 +75,7 @@
               <p className="text-center">Elegant and neat.</p>
               <div className="d-flex justify-content-center align-items-center">
                 <button type="button" className="btn btn-dark glow-on-hover download_btn">
-                  <a href="https://raw.githubusercontent.com/hypergeek-dev/Myportfolio/main/src/assets/graphics/cv.pdf" download>Download my resume</a>
+                  <a href="https://raw.githubusercontent.com/hypergeek-dev/Myportfolio/main/src/assets/graphic/cv.pdf" download>Download my resume</a>
                 </button>
               </div>
             </div>
