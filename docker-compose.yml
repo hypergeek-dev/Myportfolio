@@ -19,9 +19,11 @@ services:
     # Use the official Nginx image
     image: nginx
     # Mount the React app's build directory as the Nginx web root
-    volumes:
-      - ./build:/usr/share/nginx/html
-      - ./nginx.conf:/etc/nginx/nginx.conf
+
+  volumes:
+    - ./build:/usr/share/nginx/html
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
     # Expose port for Nginx
     ports:
       - "80:80"
