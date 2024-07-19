@@ -7,7 +7,7 @@ Welcome to MyPortfolio, a personal portfolio website built using React.js. This 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-Live at [HyperGeek's Portfolio](https://www.hypergeek.dev). 
+Live at [HyperGeek's Portfolio](https://www.dmjnow.online). 
 
 ## Table of Contents
 
