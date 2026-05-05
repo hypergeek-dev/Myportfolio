@@ -108,7 +108,7 @@ const translations = {
       label: "Profile summary",
       kicker: "Current focus",
       text:
-        "Shipping useful applications, improving product clarity, and keeping older learning projects honest instead of pretending every link is still production-ready.",
+        "Building data-driven systems that collect, structure, and make information usable, from raw input to working solutions.",
     },
     work: {
       eyebrow: "Selected work",
@@ -180,7 +180,7 @@ const translations = {
       label: "Profilsammanfattning",
       kicker: "Aktuellt fokus",
       text:
-        "Att leverera användbara applikationer, göra produkter tydligare och presentera äldre lärprojekt ärligt i stället för att låtsas att varje länk fortfarande är produktionsklar.",
+        "Att bygga datadrivna system som samlar in, strukturerar och gör information användbar, från rå input till fungerande lösningar.",
     },
     work: {
       eyebrow: "Utvalda projekt",
@@ -252,7 +252,7 @@ const translations = {
       label: "Profiloversigt",
       kicker: "Aktuelt fokus",
       text:
-        "At levere nyttige applikationer, gøre produkter tydeligere og præsentere ældre læringsprojekter ærligt i stedet for at lade som om, alle links stadig er produktionsklare.",
+        "At bygge datadrevne systemer, der indsamler, strukturerer og gør information brugbar, fra rå input til fungerende løsninger.",
     },
     work: {
       eyebrow: "Udvalgt arbejde",
