@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const featuredProjects = [
@@ -81,9 +81,277 @@ const skills = [
   { title: "SQL", icon: "/icons/icons8-sql-100.png" },
 ];
 
+const languages = [
+  { code: "en", label: "English", flag: "/icons/flags/gb.svg" },
+  { code: "sv", label: "Svenska", flag: "/icons/flags/se.svg" },
+  { code: "da", label: "Dansk", flag: "/icons/flags/dk.svg" },
+];
+
+const translations = {
+  en: {
+    nav: {
+      work: "Work",
+      about: "About",
+      skills: "Skills",
+      contact: "Contact",
+    },
+    hero: {
+      eyebrow: "Full-stack developer",
+      lead:
+        "I build practical web tools with React, Next.js, .NET, Python, and cloud services, with a strong eye for usability and real workflows.",
+      viewWork: "View work",
+      downloadCv: "Download CV",
+      cvEnglish: "English",
+      cvSwedish: "Swedish",
+    },
+    profile: {
+      label: "Profile summary",
+      kicker: "Current focus",
+      text:
+        "Shipping useful applications, improving product clarity, and keeping older learning projects honest instead of pretending every link is still production-ready.",
+    },
+    work: {
+      eyebrow: "Selected work",
+      heading: "Current, live projects first.",
+      liveSite: "Live site",
+      code: "Code",
+      projectPreview: "preview",
+      projects: [
+        {
+          status: "Live product",
+          description:
+            "A practical meeting-search platform with clean-time calculations, multilingual support, and user/admin portal flows.",
+          impact: [
+            "Built around real user workflows instead of a demo-only concept.",
+            "Connects search, personal recovery milestones, and administration in one product surface.",
+          ],
+        },
+        {
+          status: "Live hackathon project",
+          description:
+            "A holiday card generator created during a student hackathon, where our team won first place. I keep it here as a snapshot of my early learning, collaborative delivery, and the moment I started recognizing UX as one of my strengths.",
+        },
+      ],
+      archiveHeading: "Archived learning projects",
+      archiveText:
+        "Earlier projects from my learning path. Some live deployments are no longer maintained, so these are presented as code references.",
+    },
+    about: {
+      eyebrow: "About",
+      heading: "Technical work shaped by pedagogy and product thinking.",
+      paragraphs: [
+        "My background in pedagogics gives me a useful lens for software: understand people first, reduce friction, and explain complexity clearly. I like building features that are technically solid and understandable to the people using them.",
+        "The portfolio now reflects the current picture: a developer with stronger full-stack capability, real hosted work, and a cleaner presentation of earlier projects.",
+      ],
+    },
+    skills: {
+      eyebrow: "Skills",
+      heading: "Tools I use to build and ship.",
+    },
+    contact: {
+      eyebrow: "Contact",
+      heading: "Let's talk about the next useful thing.",
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      sending: "Sending...",
+      send: "Send message",
+      sent: "Message sent.",
+      error: "Message failed. Email me directly.",
+    },
+  },
+  sv: {
+    nav: {
+      work: "Projekt",
+      about: "Om",
+      skills: "Kompetenser",
+      contact: "Kontakt",
+    },
+    hero: {
+      eyebrow: "Fullstackutvecklare",
+      lead:
+        "Jag bygger praktiska webbverktyg med React, Next.js, .NET, Python och molntjänster, med stark känsla för användbarhet och verkliga arbetsflöden.",
+      viewWork: "Visa projekt",
+      downloadCv: "Ladda ner CV",
+      cvEnglish: "Engelska",
+      cvSwedish: "Svenska",
+    },
+    profile: {
+      label: "Profilsammanfattning",
+      kicker: "Aktuellt fokus",
+      text:
+        "Att leverera användbara applikationer, göra produkter tydligare och presentera äldre lärprojekt ärligt i stället för att låtsas att varje länk fortfarande är produktionsklar.",
+    },
+    work: {
+      eyebrow: "Utvalda projekt",
+      heading: "Aktuella liveprojekt först.",
+      liveSite: "Livesida",
+      code: "Kod",
+      projectPreview: "förhandsvisning",
+      projects: [
+        {
+          status: "Liveprodukt",
+          description:
+            "En praktisk plattform för mötessökning med beräkning av clean time, flerspråkigt stöd och flöden för användar- och adminportal.",
+          impact: [
+            "Byggd kring verkliga användarflöden i stället för ett rent demokoncept.",
+            "Kopplar samman sökning, personliga milstolpar i tillfrisknande och administration i samma produkt.",
+          ],
+        },
+        {
+          status: "Live hackathonprojekt",
+          description:
+            "En generator för julkort skapad under ett studenthackathon där vårt team vann första pris. Jag behåller den här som en bild av min tidiga inlärning, samarbetet i leveransen och ögonblicket då jag började se UX som en av mina styrkor.",
+        },
+      ],
+      archiveHeading: "Arkiverade lärprojekt",
+      archiveText:
+        "Tidigare projekt från min lärresa. Vissa livedeployments underhålls inte längre, så de presenteras här som kodreferenser.",
+    },
+    about: {
+      eyebrow: "Om",
+      heading: "Tekniskt arbete format av pedagogik och produkttänkande.",
+      paragraphs: [
+        "Min bakgrund inom pedagogik ger mig ett användbart perspektiv på mjukvara: förstå människor först, minska friktion och förklara komplexitet tydligt. Jag gillar att bygga funktioner som är tekniskt stabila och begripliga för dem som använder dem.",
+        "Portfolion speglar nu nuläget: en utvecklare med starkare fullstackkompetens, verkligt hostade projekt och en renare presentation av tidigare projekt.",
+      ],
+    },
+    skills: {
+      eyebrow: "Kompetenser",
+      heading: "Verktyg jag använder för att bygga och leverera.",
+    },
+    contact: {
+      eyebrow: "Kontakt",
+      heading: "Låt oss prata om nästa användbara sak.",
+      name: "Namn",
+      email: "E-post",
+      message: "Meddelande",
+      sending: "Skickar...",
+      send: "Skicka meddelande",
+      sent: "Meddelandet skickades.",
+      error: "Meddelandet misslyckades. Mejla mig direkt.",
+    },
+  },
+  da: {
+    nav: {
+      work: "Projekter",
+      about: "Om",
+      skills: "Kompetencer",
+      contact: "Kontakt",
+    },
+    hero: {
+      eyebrow: "Fullstackudvikler",
+      lead:
+        "Jeg bygger praktiske webværktøjer med React, Next.js, .NET, Python og cloud-tjenester, med et skarpt blik for brugervenlighed og reelle arbejdsgange.",
+      viewWork: "Se projekter",
+      downloadCv: "Hent CV",
+      cvEnglish: "Engelsk",
+      cvSwedish: "Svensk",
+    },
+    profile: {
+      label: "Profiloversigt",
+      kicker: "Aktuelt fokus",
+      text:
+        "At levere nyttige applikationer, gøre produkter tydeligere og præsentere ældre læringsprojekter ærligt i stedet for at lade som om, alle links stadig er produktionsklare.",
+    },
+    work: {
+      eyebrow: "Udvalgt arbejde",
+      heading: "Aktuelle liveprojekter først.",
+      liveSite: "Live site",
+      code: "Kode",
+      projectPreview: "forhåndsvisning",
+      projects: [
+        {
+          status: "Liveprodukt",
+          description:
+            "En praktisk platform til mødesøgning med clean-time-beregninger, flersproget understøttelse og flows til bruger- og adminportal.",
+          impact: [
+            "Bygget omkring reelle brugerflows i stedet for et rent demokoncept.",
+            "Forbinder søgning, personlige milepæle i recovery og administration i én samlet produktflade.",
+          ],
+        },
+        {
+          status: "Live hackathonprojekt",
+          description:
+            "En generator til julekort skabt under et studenthackathon, hvor vores team vandt førstepladsen. Jeg beholder den her som et billede af min tidlige læring, samarbejdet i leverancen og øjeblikket hvor jeg begyndte at se UX som en af mine styrker.",
+        },
+      ],
+      archiveHeading: "Arkiverede læringsprojekter",
+      archiveText:
+        "Tidligere projekter fra min læringsrejse. Nogle live-deployments bliver ikke længere vedligeholdt, så de præsenteres her som kodereferencer.",
+    },
+    about: {
+      eyebrow: "Om",
+      heading: "Teknisk arbejde formet af pædagogik og produkttænkning.",
+      paragraphs: [
+        "Min baggrund i pædagogik giver mig en nyttig vinkel på software: forstå mennesker først, reducere friktion og forklare kompleksitet klart. Jeg kan lide at bygge funktioner, der både er teknisk solide og forståelige for dem, der bruger dem.",
+        "Portfolien afspejler nu det aktuelle billede: en udvikler med stærkere fullstackkompetencer, rigtige hostede projekter og en renere præsentation af tidligere projekter.",
+      ],
+    },
+    skills: {
+      eyebrow: "Kompetencer",
+      heading: "Værktøjer jeg bruger til at bygge og levere.",
+    },
+    contact: {
+      eyebrow: "Kontakt",
+      heading: "Lad os tale om den næste nyttige ting.",
+      name: "Navn",
+      email: "E-mail",
+      message: "Besked",
+      sending: "Sender...",
+      send: "Send besked",
+      sent: "Beskeden er sendt.",
+      error: "Beskeden mislykkedes. Send mig en mail direkte.",
+    },
+  },
+};
+
+function getPreferredLanguage() {
+  if (typeof navigator === "undefined") {
+    return "en";
+  }
+
+  const browserLanguages = navigator.languages?.length
+    ? navigator.languages
+    : [navigator.language];
+  const matchingLanguage = browserLanguages.find((item) => {
+    const languageCode = item.toLowerCase();
+    return languageCode.startsWith("sv") || languageCode.startsWith("da");
+  });
+
+  if (!matchingLanguage) {
+    return "en";
+  }
+
+  return matchingLanguage.toLowerCase().startsWith("sv") ? "sv" : "da";
+}
+
 export default function Home() {
   const form = useRef(null);
+  const languageWasChosen = useRef(false);
   const [formState, setFormState] = useState("idle");
+  const [language, setLanguage] = useState("en");
+  const text = translations[language];
+
+  useEffect(() => {
+    const updateLanguageFromBrowser = () => {
+      if (!languageWasChosen.current) {
+        setLanguage(getPreferredLanguage());
+      }
+    };
+
+    updateLanguageFromBrowser();
+    window.addEventListener("languagechange", updateLanguageFromBrowser);
+
+    return () => {
+      window.removeEventListener("languagechange", updateLanguageFromBrowser);
+    };
+  }, []);
+
+  const chooseLanguage = (nextLanguage) => {
+    languageWasChosen.current = true;
+    setLanguage(nextLanguage);
+  };
 
   const sendEmail = async (event) => {
     event.preventDefault();
@@ -112,38 +380,34 @@ export default function Home() {
 
   return (
     <main>
-      <Header />
+      <Header language={language} setLanguage={chooseLanguage} text={text} />
 
       <section id="home" className="hero-section">
         <div className="container">
           <div className="hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">Full-stack developer</p>
+              <p className="eyebrow">{text.hero.eyebrow}</p>
               <h1>Dennis Jensen</h1>
-              <p className="lead">
-                I build practical web tools with React, Next.js, .NET, Python,
-                and cloud services, with a strong eye for usability and real
-                workflows.
-              </p>
+              <p className="lead">{text.hero.lead}</p>
               <div className="hero-actions">
                 <a className="primary-action" href="#work">
-                  View work
+                  {text.hero.viewWork}
                 </a>
-                <div className="cv-download-group" aria-label="Download CV">
+                <div className="cv-download-group" aria-label={text.hero.downloadCv}>
                   <span className="secondary-action cv-download-label">
-                    Download CV
+                    {text.hero.downloadCv}
                   </span>
                   <a href="/CV.pdf" download>
-                    English
+                    {text.hero.cvEnglish}
                   </a>
                   <a href="/CV_SWE.pdf" download>
-                    Swedish
+                    {text.hero.cvSwedish}
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="profile-panel" aria-label="Profile summary">
+            <div className="profile-panel" aria-label={text.profile.label}>
               <Image
                 src="/portfolio/profil.webp"
                 alt="Dennis Jensen"
@@ -152,12 +416,8 @@ export default function Home() {
                 priority
               />
               <div>
-                <p className="panel-kicker">Current focus</p>
-                <p>
-                  Shipping useful applications, improving product clarity, and
-                  keeping older learning projects honest instead of pretending
-                  every link is still production-ready.
-                </p>
+                <p className="panel-kicker">{text.profile.kicker}</p>
+                <p>{text.profile.text}</p>
               </div>
             </div>
           </div>
@@ -167,21 +427,24 @@ export default function Home() {
       <section id="work" className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Selected work</p>
-            <h2>Current, live projects first.</h2>
+            <p className="eyebrow">{text.work.eyebrow}</p>
+            <h2>{text.work.heading}</h2>
           </div>
 
           <div className="project-list">
-            {featuredProjects.map((project) => (
+            {featuredProjects.map((project, index) => {
+              const projectText = text.work.projects[index];
+
+              return (
               <article className="project-card" key={project.title}>
-                <ProjectVisual project={project} />
+                <ProjectVisual project={project} previewLabel={text.work.projectPreview} />
                 <div className="project-content">
-                  <p className="project-status">{project.status}</p>
+                  <p className="project-status">{projectText.status}</p>
                   <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  {project.impact && (
+                  <p>{projectText.description}</p>
+                  {projectText.impact && (
                     <ul className="impact-list">
-                      {project.impact.map((item) => (
+                      {projectText.impact.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
@@ -193,25 +456,23 @@ export default function Home() {
                   </div>
                   <div className="project-actions">
                     <a href={project.href} target="_blank" rel="noreferrer">
-                      Live site
+                      {text.work.liveSite}
                     </a>
                     {project.code && (
                       <a href={project.code} target="_blank" rel="noreferrer">
-                        Code
+                        {text.work.code}
                       </a>
                     )}
                   </div>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
 
           <div className="archive-note">
-            <h3>Archived learning projects</h3>
-            <p>
-              Earlier projects from my learning path. Some live deployments are
-              no longer maintained, so these are presented as code references.
-            </p>
+            <h3>{text.work.archiveHeading}</h3>
+            <p>{text.work.archiveText}</p>
             <div className="archive-list">
               {archivedProjects.map((project) => (
                 <a key={project.title} href={project.code} target="_blank" rel="noreferrer">
@@ -226,21 +487,13 @@ export default function Home() {
       <section id="about" className="section-block muted-section">
         <div className="container about-grid">
           <div>
-            <p className="eyebrow">About</p>
-            <h2>Technical work shaped by pedagogy and product thinking.</h2>
+            <p className="eyebrow">{text.about.eyebrow}</p>
+            <h2>{text.about.heading}</h2>
           </div>
           <div className="about-copy">
-            <p>
-              My background in pedagogics gives me a useful lens for software:
-              understand people first, reduce friction, and explain complexity
-              clearly. I like building features that are technically solid and
-              understandable to the people using them.
-            </p>
-            <p>
-              The portfolio now reflects the current picture: a developer with
-              stronger full-stack capability, real hosted work, and a cleaner
-              presentation of earlier projects.
-            </p>
+            {text.about.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -248,8 +501,8 @@ export default function Home() {
       <section id="skills" className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Skills</p>
-            <h2>Tools I use to build and ship.</h2>
+            <p className="eyebrow">{text.skills.eyebrow}</p>
+            <h2>{text.skills.heading}</h2>
           </div>
           <div className="skill-grid">
             {skills.map((skill) => (
@@ -271,8 +524,8 @@ export default function Home() {
       <section id="contact" className="section-block contact-section">
         <div className="container contact-grid">
           <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Let's talk about the next useful thing.</h2>
+            <p className="eyebrow">{text.contact.eyebrow}</p>
+            <h2>{text.contact.heading}</h2>
             <div className="contact-links">
               <a href="mailto:dennis.mariegaard.jensen@gmail.com">
                 dennis.mariegaard.jensen@gmail.com
@@ -295,15 +548,15 @@ export default function Home() {
           </div>
 
           <form ref={form} className="contact-form" onSubmit={sendEmail}>
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="message" rows="5" placeholder="Message" required />
+            <input type="text" name="name" placeholder={text.contact.name} required />
+            <input type="email" name="email" placeholder={text.contact.email} required />
+            <textarea name="message" rows="5" placeholder={text.contact.message} required />
             <button type="submit" disabled={formState === "sending"}>
-              {formState === "sending" ? "Sending..." : "Send message"}
+              {formState === "sending" ? text.contact.sending : text.contact.send}
             </button>
-            {formState === "sent" && <p className="form-note">Message sent.</p>}
+            {formState === "sent" && <p className="form-note">{text.contact.sent}</p>}
             {formState === "error" && (
-              <p className="form-note error">Message failed. Email me directly.</p>
+              <p className="form-note error">{text.contact.error}</p>
             )}
           </form>
         </div>
@@ -312,29 +565,52 @@ export default function Home() {
   );
 }
 
-function Header() {
+function Header({ language, setLanguage, text }) {
   return (
     <header className="site-header">
       <a className="brand" href="#home" aria-label="Dennis Jensen home">
         <span>D</span>
         <strong>Dennis Jensen</strong>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div className="header-actions">
+        <nav aria-label="Main navigation">
+          <a href="#work">{text.nav.work}</a>
+          <a href="#about">{text.nav.about}</a>
+          <a href="#skills">{text.nav.skills}</a>
+          <a href="#contact">{text.nav.contact}</a>
+        </nav>
+        <div className="language-selector" aria-label="Choose language">
+          {languages.map((item) => (
+            <button
+              type="button"
+              key={item.code}
+              className={item.code === language ? "active" : ""}
+              onClick={() => setLanguage(item.code)}
+              aria-label={item.label}
+              aria-pressed={item.code === language}
+              title={item.label}
+            >
+              <Image
+                src={item.flag}
+                alt=""
+                width={24}
+                height={16}
+                aria-hidden="true"
+              />
+            </button>
+          ))}
+        </div>
+      </div>
     </header>
   );
 }
 
-function ProjectVisual({ project }) {
+function ProjectVisual({ project, previewLabel }) {
   return (
     <Image
       className="project-image"
       src={project.image}
-      alt={`${project.title} preview`}
+      alt={`${project.title} ${previewLabel}`}
       width={680}
       height={420}
     />
