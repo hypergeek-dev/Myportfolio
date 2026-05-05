@@ -12,13 +12,13 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../src/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto Slab";
-  src: url("../src/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/RobotoSlab-VariableFont_wght.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -212,6 +212,38 @@ h3 {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.cv-download-group {
+  display: inline-flex;
+  min-height: 46px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cv-download-group .cv-download-label {
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.cv-download-group a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.cv-download-group a:hover,
+.cv-download-group a:focus-visible {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  outline: none;
+}
+
 .profile-panel,
 .project-card,
 .archive-note,
@@ -228,8 +260,9 @@ h3 {
 
 .profile-panel img {
   display: block;
-  width: 180px;
-  height: 180px;
+  width: min(180px, 100%);
+  aspect-ratio: 1;
+  height: auto;
   margin-bottom: 22px;
   object-fit: cover;
   border-radius: 8px;
@@ -271,7 +304,8 @@ h3 {
 
 .project-image {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
   min-height: 360px;
   object-fit: cover;
 }
@@ -494,7 +528,7 @@ h3 {
 
   .project-image,
   .product-visual {
-    min-height: 280px;
+    min-height: 0;
   }
 }
 
@@ -518,7 +552,31 @@ h3 {
 
   .primary-action,
   .secondary-action,
-  .project-actions a {
+  .project-actions a,
+  .cv-download-group {
     width: 100%;
+  }
+
+  .cv-download-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cv-download-group .cv-download-label {
+    grid-column: 1 / -1;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .project-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .profile-panel {
+    padding: 18px;
+  }
+
+  .profile-panel img {
+    width: min(150px, 100%);
   }
 }

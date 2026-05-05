@@ -129,9 +129,17 @@ export default function Home() {
                 <a className="primary-action" href="#work">
                   View work
                 </a>
-                <a className="secondary-action" href="/Dennis_Jensen_CV.pdf">
-                  Download CV
-                </a>
+                <div className="cv-download-group" aria-label="Download CV">
+                  <span className="secondary-action cv-download-label">
+                    Download CV
+                  </span>
+                  <a href="/CV.pdf" download>
+                    English
+                  </a>
+                  <a href="/CV_SWE.pdf" download>
+                    Swedish
+                  </a>
+                </div>
               </div>
             </div>
 
