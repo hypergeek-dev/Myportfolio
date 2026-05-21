@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+
 
 const featuredProjects = [
   {
@@ -327,7 +327,6 @@ function getPreferredLanguage() {
 }
 
 export default function Home() {
-  const form = useRef(null);
   const languageWasChosen = useRef(false);
   const [formState, setFormState] = useState("idle");
   const [language, setLanguage] = useState("en");
@@ -357,21 +356,22 @@ export default function Home() {
     event.preventDefault();
     setFormState("sending");
 
-    const formData = new FormData(form.current);
-    const templateParams = {
-      from_name: formData.get("name"),
-      from_email: formData.get("email"),
-      message: formData.get("message"),
-    };
+    const formData = new FormData(event.currentTarget);
 
     try {
-      await emailjs.send(
-        "service_6erq9js",
-        "template_b96h8du",
-        templateParams,
-        "3Yvs7CV-qUSayuQjb"
-      );
-      form.current.reset();
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Send failed");
+
+      event.currentTarget.reset();
       setFormState("sent");
     } catch {
       setFormState("error");
@@ -547,7 +547,7 @@ export default function Home() {
             </div>
           </div>
 
-          <form ref={form} className="contact-form" onSubmit={sendEmail}>
+          <form className="contact-form" onSubmit={sendEmail}>
             <input type="text" name="name" placeholder={text.contact.name} required />
             <input type="email" name="email" placeholder={text.contact.email} required />
             <textarea name="message" rows="5" placeholder={text.contact.message} required />
