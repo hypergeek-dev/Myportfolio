@@ -283,6 +283,10 @@ h3 {
   font-weight: 800;
 }
 
+.cv-download-group a + a {
+  border-left: 1px solid var(--line);
+}
+
 .cv-download-group a:hover,
 .cv-download-group a:focus-visible {
   color: var(--text);
@@ -349,10 +353,10 @@ h3 {
 }
 
 .project-image {
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  height: auto;
-  min-height: 360px;
+  height: 100%;
+  min-height: 300px;
   object-fit: cover;
 }
 
@@ -581,7 +585,9 @@ h3 {
 
   .project-image,
   .product-visual {
+    height: auto;
     min-height: 0;
+    aspect-ratio: 16 / 10;
   }
 }
 
