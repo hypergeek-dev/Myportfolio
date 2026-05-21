@@ -101,8 +101,10 @@ const translations = {
         "I build practical web tools with React, Next.js, .NET, Python, and cloud services, with a strong eye for usability and real workflows.",
       viewWork: "View work",
       downloadCv: "Download CV",
-      cvEnglish: "English",
-      cvSwedish: "Swedish",
+      cvLangEn: "EN",
+      cvLangSv: "SV",
+      cvPdf: "PDF",
+      cvTxt: "TXT",
     },
     profile: {
       label: "Profile summary",
@@ -173,8 +175,10 @@ const translations = {
         "Jag bygger praktiska webbverktyg med React, Next.js, .NET, Python och molntjänster, med stark känsla för användbarhet och verkliga arbetsflöden.",
       viewWork: "Visa projekt",
       downloadCv: "Ladda ner CV",
-      cvEnglish: "Engelska",
-      cvSwedish: "Svenska",
+      cvLangEn: "EN",
+      cvLangSv: "SV",
+      cvPdf: "PDF",
+      cvTxt: "TXT",
     },
     profile: {
       label: "Profilsammanfattning",
@@ -245,8 +249,10 @@ const translations = {
         "Jeg bygger praktiske webværktøjer med React, Next.js, .NET, Python og cloud-tjenester, med et skarpt blik for brugervenlighed og reelle arbejdsgange.",
       viewWork: "Se projekter",
       downloadCv: "Hent CV",
-      cvEnglish: "Engelsk",
-      cvSwedish: "Svensk",
+      cvLangEn: "EN",
+      cvLangSv: "SV",
+      cvPdf: "PDF",
+      cvTxt: "TXT",
     },
     profile: {
       label: "Profiloversigt",
@@ -397,12 +403,16 @@ export default function Home() {
                   <span className="secondary-action cv-download-label">
                     {text.hero.downloadCv}
                   </span>
-                  <a href="/CV.pdf" download>
-                    {text.hero.cvEnglish}
-                  </a>
-                  <a href="/CV_SWE.pdf" download>
-                    {text.hero.cvSwedish}
-                  </a>
+                  <div className="cv-lang-group">
+                    <span className="cv-lang-tag">{text.hero.cvLangEn}</span>
+                    <a href="/CV.pdf" download title="English CV – PDF">{text.hero.cvPdf}</a>
+                    <a href="/CV_plain_EN.txt" download title="English CV – plain text">{text.hero.cvTxt}</a>
+                  </div>
+                  <div className="cv-lang-group">
+                    <span className="cv-lang-tag">{text.hero.cvLangSv}</span>
+                    <a href="/CV_SWE.pdf" download title="Swedish CV – PDF">{text.hero.cvPdf}</a>
+                    <a href="/CV_plain_SV.txt" download title="Swedish CV – plain text">{text.hero.cvTxt}</a>
+                  </div>
                 </div>
               </div>
             </div>

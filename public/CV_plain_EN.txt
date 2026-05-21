@@ -1,0 +1,76 @@
+DENNIS JENSEN
+System Developer
+
+Sweden
+Email: dennis.mariegaard.jensen@gmail.com
+Phone: +46 79 013 91 87
+Website: https://dmjnow.com/
+
+PROFILE
+
+Backend-focused system developer with experience in data pipelines, ETL processes, and system integration. I develop and implement solutions that collect, transform, and normalize data from multiple sources.
+
+I have a strong focus on automation, reliability, and scalable data processing using XML, JSON, XSLT, SQL, and APIs.
+
+TECHNICAL SKILLS
+
+Data and pipelines:
+Python, SQL, ETL processes, data normalization, automation
+
+Backend and APIs:
+Django, ASP.NET, REST API development
+
+Data formats and transformation:
+XML, JSON, XSLT, XPath
+
+Databases:
+MySQL, SQL Server
+
+Tools and working methods:
+Git, web scraping, logging, retry strategies, rate limiting
+
+EXPERIENCE
+
+System Developer
+Lund Municipality
+Dec 2025 - Present
+
+- Develop and maintain backend systems for data processing and system integration.
+- Build ETL flows for collecting, validating, and normalizing structured data.
+- Transform data with XML, JSON, and XSLT across multiple data flows.
+- Implement web crawlers with logging, retry logic, and rate limiting.
+- Deliver compiled GUI-based tools to support internal data handling processes.
+
+PROJECTS
+
+Meeting Aggregation Platform
+nameetings.cloud
+
+- Designed and built an ETL pipeline processing data from 40+ global sources.
+- Implemented flows for collection, validation, normalization, and transformation.
+- Integrated multiple APIs and standardized heterogeneous data formats.
+- Developed an admin system with full CRUD functionality for data management.
+
+EDUCATION
+
+Full Stack Software Development
+Code Institute
+2022-2024
+
+.NET Developer
+Lexicon Malmo
+2023
+
+Pedagogy
+University College Kolding
+2012-2016
+
+PREVIOUS EXPERIENCE
+
+Preschool Teacher
+Landskrona Municipality
+2018-2022
+
+Preschool Teacher
+Malmo Municipality
+2016-2018
