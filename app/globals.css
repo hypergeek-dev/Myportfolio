@@ -384,6 +384,10 @@ h3 {
   object-position: center 64%;
 }
 
+.project-card:nth-child(2) .project-image {
+  object-position: left top;
+}
+
 .product-visual {
   min-height: 360px;
   padding: 30px;

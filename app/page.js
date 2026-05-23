@@ -12,12 +12,28 @@ const featuredProjects = [
       "A practical meeting-search platform with clean-time calculations, multilingual support, and user/admin portal flows.",
     href: "https://nameetings.cloud/",
     code: null,
+    readme: "https://github.com/hypergeek-dev/nameetingsdotcloud/blob/main/README.md",
     stack: ["Next.js", "JavaScript", "CSS"],
     impact: [
       "Built around real user workflows instead of a demo-only concept.",
       "Connects search, personal recovery milestones, and administration in one product surface.",
     ],
     image: "/portfolio/nameetings-cloud.png",
+  },
+  {
+    title: "Quickfire Cyber Bulletin",
+    status: "Live product",
+    description:
+      "A daily cybersecurity briefing that aggregates and ranks threats from CISA KEV, NVD, EPSS, GitHub Security Advisories, and curated news feeds — prioritised for small organisations and solo sysadmins.",
+    href: "https://qcb.dmjnow.cloud/",
+    code: "https://github.com/hypergeek-dev/Quickfire_bulletin",
+    readme: null,
+    stack: ["Python", "Django", "PostgreSQL"],
+    impact: [
+      "Turns raw vulnerability data from multiple authoritative sources into a single ranked daily briefing.",
+      "Designed for practitioners who need actionable signal, not noise.",
+    ],
+    image: "/portfolio/qcb.jpg",
   },
   {
     title: "Jingle Bingle",
@@ -47,10 +63,6 @@ const archivedProjects = [
   {
     title: "My Cakery Shop",
     code: "https://github.com/hypergeek-dev/cakery-webshop",
-  },
-  {
-    title: "Quickfire Bulletin",
-    code: "https://github.com/hypergeek-dev/Quickfire_bulletin",
   },
   {
     title: "Mosaic Minds",
@@ -114,9 +126,10 @@ const translations = {
     },
     work: {
       eyebrow: "Selected work",
-      heading: "Current, live projects first.",
+      heading: "Current, live projects.",
       liveSite: "Live site",
       code: "Code",
+      readme: "README",
       projectPreview: "preview",
       projects: [
         {
@@ -126,6 +139,15 @@ const translations = {
           impact: [
             "Built around real user workflows instead of a demo-only concept.",
             "Connects search, personal recovery milestones, and administration in one product surface.",
+          ],
+        },
+        {
+          status: "Live product",
+          description:
+            "A daily cybersecurity briefing that aggregates and ranks threats from CISA KEV, NVD, EPSS, GitHub Security Advisories, and curated news feeds — prioritised for small organisations and solo sysadmins.",
+          impact: [
+            "Turns raw vulnerability data from multiple authoritative sources into a single ranked daily briefing.",
+            "Designed for practitioners who need actionable signal, not noise.",
           ],
         },
         {
@@ -188,9 +210,10 @@ const translations = {
     },
     work: {
       eyebrow: "Utvalda projekt",
-      heading: "Aktuella liveprojekt först.",
+      heading: "Aktuella liveprojekt.",
       liveSite: "Livesida",
       code: "Kod",
+      readme: "README",
       projectPreview: "förhandsvisning",
       projects: [
         {
@@ -200,6 +223,15 @@ const translations = {
           impact: [
             "Byggd kring verkliga användarflöden i stället för ett rent demokoncept.",
             "Kopplar samman sökning, personliga milstolpar i tillfrisknande och administration i samma produkt.",
+          ],
+        },
+        {
+          status: "Liveprodukt",
+          description:
+            "Ett dagligt cybersäkerhetsbrev som aggregerar och rangordnar hot från CISA KEV, NVD, EPSS, GitHub Security Advisories och utvalda nyhetsflöden – prioriterat för små organisationer och ensamma sysadmins.",
+          impact: [
+            "Omvandlar råa sårbarhetsdata från flera auktoritativa källor till ett enda rangordnat dagligt brev.",
+            "Utformat för praktiker som behöver användbar signal, inte brus.",
           ],
         },
         {
@@ -262,9 +294,10 @@ const translations = {
     },
     work: {
       eyebrow: "Udvalgt arbejde",
-      heading: "Aktuelle liveprojekter først.",
+      heading: "Aktuelle liveprojekter.",
       liveSite: "Live site",
       code: "Kode",
+      readme: "README",
       projectPreview: "forhåndsvisning",
       projects: [
         {
@@ -274,6 +307,15 @@ const translations = {
           impact: [
             "Bygget omkring reelle brugerflows i stedet for et rent demokoncept.",
             "Forbinder søgning, personlige milepæle i recovery og administration i én samlet produktflade.",
+          ],
+        },
+        {
+          status: "Liveprodukt",
+          description:
+            "Et dagligt cybersikkerhedsbrev, der aggregerer og rangordner trusler fra CISA KEV, NVD, EPSS, GitHub Security Advisories og udvalgte nyhedsfeeds – prioriteret til små organisationer og solo-sysadmins.",
+          impact: [
+            "Omdanner rå sårbarhedsdata fra flere autoritative kilder til én samlet rangordnet daglig briefing.",
+            "Designet til praktikere, der har brug for brugbart signal, ikke støj.",
           ],
         },
         {
@@ -471,6 +513,11 @@ export default function Home() {
                     {project.code && (
                       <a href={project.code} target="_blank" rel="noreferrer">
                         {text.work.code}
+                      </a>
+                    )}
+                    {project.readme && (
+                      <a href={project.readme} target="_blank" rel="noreferrer" className="readme-link">
+                        {text.work.readme}
                       </a>
                     )}
                   </div>
