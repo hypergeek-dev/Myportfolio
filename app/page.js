@@ -116,7 +116,7 @@ const translations = {
       cvLangEn: "EN",
       cvLangSv: "SV",
       cvPdf: "PDF",
-      cvTxt: "TXT",
+      cvDocx: "DOCX",
     },
     profile: {
       label: "Profile summary",
@@ -200,7 +200,7 @@ const translations = {
       cvLangEn: "EN",
       cvLangSv: "SV",
       cvPdf: "PDF",
-      cvTxt: "TXT",
+      cvDocx: "DOCX",
     },
     profile: {
       label: "Profilsammanfattning",
@@ -284,7 +284,7 @@ const translations = {
       cvLangEn: "EN",
       cvLangSv: "SV",
       cvPdf: "PDF",
-      cvTxt: "TXT",
+      cvDocx: "DOCX",
     },
     profile: {
       label: "Profiloversigt",
@@ -448,12 +448,12 @@ export default function Home() {
                   <div className="cv-lang-group">
                     <span className="cv-lang-tag">{text.hero.cvLangEn}</span>
                     <a href="/CV.pdf" download title="English CV – PDF">{text.hero.cvPdf}</a>
-                    <a href="/CV_plain_EN.txt" download title="English CV – plain text">{text.hero.cvTxt}</a>
+                    <a href="/Dennis_Jensen_CV_EN_ATS.docx" download title="English CV – Word document">{text.hero.cvDocx}</a>
                   </div>
                   <div className="cv-lang-group">
                     <span className="cv-lang-tag">{text.hero.cvLangSv}</span>
                     <a href="/CV_SWE.pdf" download title="Swedish CV – PDF">{text.hero.cvPdf}</a>
-                    <a href="/CV_plain_SV.txt" download title="Swedish CV – plain text">{text.hero.cvTxt}</a>
+                    <a href="/Dennis_Jensen_CV_SV_ATS.docx" download title="Swedish CV – Word document">{text.hero.cvDocx}</a>
                   </div>
                 </div>
               </div>
